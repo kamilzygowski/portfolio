@@ -5,6 +5,7 @@ import Home from '../Home/Home'
 import Projects from '../Projects/Projects'
 import './App.scss'
 import 'swiper/css';
+import Games from '../Games/Games';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <Swiper
         direction={"horizontal"}
         slidesPerView={1}
-        spaceBetween={30}
+        //spaceBetween={30}
         mousewheel={true}
         pagination={{
           clickable: true,
@@ -24,14 +25,15 @@ const App = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-        <Home />
+          <Home />
         </SwiperSlide>
         <SwiperSlide>
-        <Projects />
+          <Projects />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Games />
         </SwiperSlide>
       </Swiper>
-      
-      
     </div>
   )
 }

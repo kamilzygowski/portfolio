@@ -1,0 +1,43 @@
+.Hero {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    top: 10%;
+    left: 10%;
+    img {
+        width: 80vw;
+        height: 80vh;
+        object-fit: contain;
+        border-radius: 35%;
+        animation: jump 1s infinite;
+        //box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    }
+    .skillsImages{
+
+        img{
+        width:96px;
+        height:96px;
+        }
+    }
+}
+
+@keyframes jump {
+    /*0% {
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+            rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        margin-top: -5px;
+        margin-left: -5px;
+    }
+    50% {
+        box-shadow: none;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    100% {
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+            rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        margin-top: -5px;
+        margin-left: -5px;
+    }*/
+}

@@ -1,5 +1,12 @@
 .Home{
     height:100vh;
     width:100vw;
-    background: #2c2c54;
+    background: #9797f7;
+    display: flex;
+    align-content: center;
+    //background: url("https://i.postimg.cc/5yNCM3bz/tile.png");
+
+    .header{
+        margin: 0;
+    }
 }
