@@ -5,13 +5,19 @@
     flex-direction: row;
     top: 10%;
     left: 10%;
-    img {
-        width: 80vw;
-        height: 80vh;
+    font-family: 'Katibeh', cursive;
+
+    .profilePhoto{
+        
+        width:430px;
         object-fit: contain;
         border-radius: 35%;
         animation: jump 1s infinite;
         //box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    }
+    .about{
+        font-size: 38px;
+        margin:0;
     }
     .skillsImages{
 
@@ -19,6 +25,12 @@
         width:96px;
         height:96px;
         }
+    }
+    .photoContainer{
+        flex:2;
+    }
+    .info{
+        flex:3;
     }
 }
 
