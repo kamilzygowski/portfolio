@@ -7,8 +7,45 @@
     left: 10%;
     font-family: 'Katibeh', cursive;
 
-    .profilePhoto{
+    ul{
+        list-style: none;
+        position: relative;
+        margin: 0;
+    padding: 0;
+
+        li{
+            position: absolute;
+            -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    transition: all 2s linear;
+
+    p{
+        margin-top:-5px;
+        font-size:23px;
         
+        --interval: 1s;
+  display: block;
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+  color:#FFC312;
+  --color1: azure;
+  --color2: aqua;
+  --color3: dodgerblue;
+  --color4: blue;
+  font-family: Sriracha;
+    }
+        }
+    }
+
+    .profilePhoto{
+        margin-top:50px;
+        margin-left:250px;
         width:430px;
         object-fit: contain;
         border-radius: 35%;
@@ -22,8 +59,8 @@
     .skillsImages{
 
         img{
-        width:96px;
-        height:96px;
+        width:74px;
+        height:74px;
         }
     }
     .photoContainer{
@@ -53,3 +90,10 @@
         margin-left: -5px;
     }*/
 }
+
+@keyframes flicker {
+    50% {
+      color: white;
+      filter: saturate(200%) hue-rotate(20deg);
+    }
+  }
