@@ -1,0 +1,11 @@
+.About{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    text-align: center;
+
+    p{
+        padding:40px;
+        font-size:26px;
+    }
+}

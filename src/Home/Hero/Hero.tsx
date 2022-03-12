@@ -72,26 +72,22 @@ const Hero = () => {
     return (
         <div className='Hero'>
             <div className='info'>
-                {/*<p className='about'>
-                    Greetings my friend! My name is Kamil, I am 23 years old psychologist, frontend developer living in Gdańsk, Poland.
-                </p>
-    <p className='skillsTitle'>My skills</p>*/}
                 <div className='skillsImages'>
                     <ul className='list' ref={function (element: any) { setCircleContainer(element) }}>
                         {skillsData.map((element: any, index: number) => {
                             return <li className='listItem' key={index}  style={
                                 {
                                     position: 'absolute',
-                                    left: `${offset.x + 425}px`,
-                                    top: `${offset.y + 150}px`
+                                    left: `${offset.x + (window.innerWidth/6 - 70)}px`,
+                                    top: `${offset.y + (window.innerHeight/2 - 150)}px`
                                 }}><img src={element.src} alt={element.alt} /><p>{element.alt}</p></li>
                         })}
                     </ul>
                 </div>
             </div>
-            <div className='photoContainer'>
+            {/*<div className='photoContainer'>
                 <img src="https://i.postimg.cc/QMkKjN87/DUOTONE.png" alt="me" className='profilePhoto' />
-            </div>
+                    </div>*/}
         </div>
     )
 }

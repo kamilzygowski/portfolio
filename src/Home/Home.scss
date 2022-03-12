@@ -2,11 +2,25 @@
     height:100vh;
     width:100vw;
     background: #9797f7;
-    display: flex;
     align-content: center;
     //background: url("https://i.postimg.cc/5yNCM3bz/tile.png");
-
+    display: flex;
     .header{
         margin: 0;
     }
+}
+
+.main {
+    width: 90vw;
+    height: 90vh;
+    background: #164e8b;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 3.8px;
+    //background: url("https://i.postimg.cc/2yB0nrLT/pexels-nicole-avagliano-2312040-1.jpg");
+    background:#ba6ed6;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
 }

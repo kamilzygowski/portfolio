@@ -1,12 +1,14 @@
 .Hero {
-    position: absolute;
+    //position: absolute;
     display: flex;
+    flex:1;
     align-content: center;
     flex-direction: row;
-    top: 10%;
-    left: 10%;
     font-family: 'Katibeh', cursive;
-
+    background: url('https://i.postimg.cc/QMkKjN87/DUOTONE.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     ul{
         list-style: none;
         position: relative;
@@ -44,8 +46,7 @@
     }
 
     .profilePhoto{
-        margin-top:50px;
-        margin-left:250px;
+        
         width:430px;
         object-fit: contain;
         border-radius: 35%;
@@ -57,7 +58,7 @@
         margin:0;
     }
     .skillsImages{
-
+        position: relative;
         img{
         width:74px;
         height:74px;
