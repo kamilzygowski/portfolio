@@ -4,7 +4,7 @@ import './Projects.scss'
 const Projects = () => {
     return (
         <div className='Projects'>
-            Projects
+            <iframe src="https://swedishsailor.github.io/3game/" className='project' title='3game' />
         </div>
     )
 }

@@ -1,0 +1,43 @@
+.Sidebar {
+    position: absolute;
+    left: -90px;
+    z-index: 4;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transition: 0.2s ease-in-out;
+
+    .sideLinks {
+        display: flex;
+        flex-direction: column;
+        .icon {
+            font-size: 36px;
+            padding: 24px;
+
+            &:hover {
+                color: #000;
+                transition: 0.15s;
+            }
+        }
+    }
+    .socialLinks {
+       margin-top: 150px;
+       display: flex;
+       flex-direction: column;
+
+       .social{
+           padding:10px;
+           margin:12px;
+       }
+    }
+    .expandIcon {
+        font-size: 36px;
+        color: rgba(255, 255, 255, 0.4);
+        &:hover {
+            color: #000;
+            transition: 0.15s;
+        }
+    }
+}

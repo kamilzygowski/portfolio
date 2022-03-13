@@ -1,100 +1,103 @@
 .Hero {
-    //position: absolute;
     display: flex;
-    flex:1;
+    flex: 1;
     align-content: center;
     flex-direction: row;
-    font-family: 'Katibeh', cursive;
-    background: url('https://i.postimg.cc/QMkKjN87/DUOTONE.png');
+    background: url("https://i.postimg.cc/QMkKjN87/DUOTONE.png");
     background-position: center;
-    background-size: contain;
+    background-size: 70%;
     background-repeat: no-repeat;
-    ul{
+
+    ul {
         list-style: none;
         position: relative;
         margin: 0;
-    padding: 0;
+        padding: 0;
+        top: -80px;
 
-        li{
+        @media (min-width:950px) and (max-width:1200px) {
+            top: -20px;
+            left:10px;
+        }
+        @media (min-width:650px) and (max-width:950px) {
+            top: 20px;
+            left:35px;
+        }
+        @media (min-width:350px) and (max-width:650px) {
+            
+        }
+
+        li {
             position: absolute;
             -webkit-transition: all 2s linear;
-    -moz-transition: all 2s linear;
-    transition: all 2s linear;
+            -moz-transition: all 2s linear;
+            transition: all 2s linear;
 
-    p{
-        margin-top:-5px;
-        font-size:23px;
-        
-        --interval: 1s;
-  display: block;
-  text-shadow: 
-    0 0 10px var(--color1),
-    0 0 20px var(--color2),
-    0 0 40px var(--color3),
-    0 0 80px var(--color4);
-  will-change: filter, color;
-  filter: saturate(60%);
-  animation: flicker steps(100) var(--interval) 1s infinite;
-  color:#FFC312;
-  --color1: azure;
-  --color2: aqua;
-  --color3: dodgerblue;
-  --color4: blue;
-  font-family: Sriracha;
-    }
+            p {
+                margin-top: -5px;
+                font-size: 23px;
+                --interval: 1s;
+                display: block;
+                text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2), 0 0 40px var(--color3),
+                    0 0 80px var(--color4);
+                will-change: filter, color;
+                filter: saturate(60%);
+                animation: flicker steps(100) var(--interval) 1s infinite;
+                color: #f8f8ba;
+                --color1: azure;
+                --color2: aqua;
+                --color3: dodgerblue;
+                --color4: blue;
+                font-family: Sriracha;
+
+                @media (min-width:950px) and (max-width:1200px) {
+                    font-size: 20px;
+                }
+                @media (min-width:650px) and (max-width:950px) {
+                    font-size: 16px;
+                }
+                @media (min-width:350px) and (max-width:650px) {
+                    font-size: 12px;
+                }
+            }
         }
     }
 
-    .profilePhoto{
-        
-        width:430px;
-        object-fit: contain;
-        border-radius: 35%;
-        animation: jump 1s infinite;
-        //box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-    }
-    .about{
+    .about {
         font-size: 38px;
-        margin:0;
+        margin: 0;
     }
-    .skillsImages{
+    .skillsImages {
         position: relative;
-        img{
-        width:74px;
-        height:74px;
+        img {
+            width: 74px;
+            height: 74px;
+
+            @media (min-width:950px) and (max-width:1200px) {
+                width: 64px;
+                height:64px;
+            }
+            @media (min-width:650px) and (max-width:950px) {
+                width: 46px;
+                height:46px;
+            }
+            @media (min-width:350px) and (max-width:650px) {
+                width: 32px;
+                height:32px;
+            }
         }
     }
-    .photoContainer{
-        flex:2;
+    .photoContainer {
+        flex: 2;
     }
-    .info{
-        flex:3;
+    .info {
+        flex: 3;
     }
-}
-
-@keyframes jump {
-    /*0% {
-        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-            rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-        margin-top: -5px;
-        margin-left: -5px;
-    }
-    50% {
-        box-shadow: none;
-        margin-top: 0;
-        margin-left: 0;
-    }
-    100% {
-        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-            rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-        margin-top: -5px;
-        margin-left: -5px;
-    }*/
 }
 
 @keyframes flicker {
     50% {
-      color: white;
-      filter: saturate(200%) hue-rotate(20deg);
+        color: white;
+        filter: saturate(200%) hue-rotate(20deg);
     }
-  }
+}

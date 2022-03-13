@@ -6,10 +6,12 @@ import Projects from '../Projects/Projects'
 import './App.scss'
 import 'swiper/css';
 import Games from '../Games/Games';
+import Sidebar from '../Sidebar/Sidebar';
 
 const App = () => {
   return (
     <div className='App'>
+      <Sidebar/>
       <Swiper
         direction={"horizontal"}
         slidesPerView={1}
