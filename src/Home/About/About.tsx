@@ -9,9 +9,9 @@ const About = () => {
       </p>
       <p>I love : juggling , making PixelArt-style graphics , learning about human perception , 
   watching anime , coding and of course both playing and making computer games!</p>*/}
-  <p> Hi, </p>
-   <p> my names is Kamil, </p>
-    <p>I'm psychologist and frontend developer </p>
+  <img className='aboutHello' src="https://i.postimg.cc/wxkksp9r/portfolio-hello.png" alt="Hello"/>
+   <p> my name is Kamil</p>
+    <p>Psychologist and frontend developer </p>
     <p> You can find me in Gdańsk, Poland</p>
     </div>
   )

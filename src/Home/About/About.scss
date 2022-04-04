@@ -3,24 +3,38 @@
     flex-direction: column;
     flex:1;
     text-align: center;
+    background: #430061;
+    padding:50px;
+    padding-block: 100px;
+    font-family: 'Kavoon', cursive;
+    letter-spacing: 3px;
+
+    .aboutHello{
+        width:50%;
+        margin-inline: auto;
+        margin-block:55px;
+    }
+    
 
     p{
         padding:40px;
         font-size:26px;
         margin:0;
         padding: 0;
+        color:#FEFEDF;
+        padding:25px;
     }
 
     p:nth-of-type(1){
-        font-size:86px;
+        font-size:100px;
     }
     p:nth-of-type(2){
-        font-size:68px;
+        font-size:75px;
     }
     p:nth-of-type(3){
         font-size:50px;
     }
     p:nth-of-type(4){
-        font-size:32px;
+        font-size:25px;
     }
 }

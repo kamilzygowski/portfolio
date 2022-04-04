@@ -7,6 +7,7 @@ import './App.scss'
 import 'swiper/css';
 import Games from '../Games/Games';
 import Sidebar from '../Sidebar/Sidebar';
+import Contact from '../Contact/Contact';
 
 const App = () => {
   return (
@@ -34,6 +35,9 @@ const App = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Games />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Contact />
         </SwiperSlide>
       </Swiper>
     </div>

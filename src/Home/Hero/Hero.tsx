@@ -32,7 +32,8 @@ const Hero = () => {
     { src: "https://i.postimg.cc/cHJwV1pZ/icons8-redux-480.png", alt: 'Redux', pos: 650 },
     { src: "https://i.postimg.cc/3rsTKXds/icons8-sass-480.png", alt: 'Sass', pos: 750 },
     { src: "https://i.postimg.cc/dDPnztQf/icons8-typescript-480.png", alt: 'Typescript', pos: 850 },
-    { src: "https://i.postimg.cc/HsbCjrMV/icons8-unity-480.png", alt: 'Unity', pos: 950 }]
+    { src: "https://i.postimg.cc/HsbCjrMV/icons8-unity-480.png", alt: 'Unity', pos: 950 },
+    { src: "https://i.postimg.cc/TP1Ccjmz/icons8-python-48.png", alt: 'Python', pos: 1050 }]
 
     const [circleContainer, setCircleContainer] = useState<any>(null);
 
@@ -64,10 +65,6 @@ const Hero = () => {
         })
 
     })
-
-
-
-
 
     return (
         <div className='Hero'>

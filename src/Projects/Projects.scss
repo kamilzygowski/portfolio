@@ -1,12 +1,14 @@
 .Projects{
     height:100vh;
     width:100vw;
-    background:#ba6ed6;
+    //background:#5352ed;
+    background: #2BBEB2;
 
     .project{
         width:90%;
         height:90%;
         border: none;
         margin-top:5vh;
+        border-radius: 10px;
     }
 }
