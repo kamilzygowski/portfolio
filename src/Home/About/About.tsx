@@ -10,9 +10,9 @@ const About = () => {
       <p>I love : juggling , making PixelArt-style graphics , learning about human perception , 
   watching anime , coding and of course both playing and making computer games!</p>*/}
   <img className='aboutHello' src="https://i.postimg.cc/wxkksp9r/portfolio-hello.png" alt="Hello"/>
-   <p> my name is Kamil</p>
-    <p>Psychologist and frontend developer </p>
-    <p> You can find me in Gdańsk, Poland</p>
+
+  <div className='imKamil'><iframe src="https://streamable.com/e/kdejkw?autoplay=1&nocontrols=1"width="100%" height="100%" allow="autoplay"></iframe></div>
+  <div className='livingInGdansk'><iframe src="https://streamable.com/e/szx32y?autoplay=1&nocontrols=1"width="100%" height="100%" allow="autoplay"></iframe></div>
     </div>
   )
 }

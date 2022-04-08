@@ -2,4 +2,88 @@
     height:100vh;
     width:100vw;
     background: lightsalmon;
+
+    .gamesUl{
+        position: absolute;
+        display: flex;
+        bottom:-17px;
+        right:0;
+        list-style: none;
+        height:80%;
+        
+    }
+    .gamesLi{
+        text-align: center;
+        height:100%;
+        width:450px;
+        color:#000;
+        
+        background-color: red;
+        position: inherit;
+        transition: ease-out 0.1s;
+     
+        &:nth-of-type(1){
+            z-index: 40;
+            right:500px;
+            bottom:0;
+            background:url("https://i.postimg.cc/fR72nYnr/Sprite-0001.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:nth-of-type(2){
+            z-index: 35;
+            right:375px;
+            bottom:65px;
+            background:url("https://i.postimg.cc/fR72nYnr/Sprite-0001.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:nth-of-type(3){
+            z-index: 30;
+            right:250px;
+            bottom:130px;
+            background:url("https://i.postimg.cc/fR72nYnr/Sprite-0001.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:nth-of-type(4){
+            z-index: 25;
+            right:125px;
+            bottom:195px;
+            background:url("https://i.postimg.cc/fR72nYnr/Sprite-0001.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:nth-of-type(5){
+            z-index: 20;
+            right:0px;
+            bottom:260px;
+            background:url("https://i.postimg.cc/fR72nYnr/Sprite-0001.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        p{
+            font-size: 24px;
+            height: 325px;
+            position: absolute;
+            transform: rotate(90deg);
+            top:160px;
+            padding-left:20px;
+        }
+        .firstP{
+            right:140px;
+        }
+        .secondP{
+            right:200px;
+        }
+        .thirdP{
+            right:210px;
+        }
+        .fourthP{
+            right:220px;
+        }
+        .fifthP{
+            right:200px;
+        }
+    }
 }
