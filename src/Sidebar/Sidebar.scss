@@ -5,7 +5,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.1);
+    //background: rgba(0, 0, 0, 0.1);
     color: #fff;
     transition: 0.2s ease-in-out;
 
@@ -15,22 +15,27 @@
         .icon {
             font-size: 36px;
             padding: 24px;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 15px;
+            margin-block: 15px;
+            box-shadow: rgba(0, 0, 0, 0.70) 0px 19px 38px, rgba(0, 0, 0, 0.85) 0px 15px 12px;
 
             &:hover {
+                background: rgba(255, 255, 255, 0.35);
                 color: #000;
-                transition: 0.15s;
+                transition: 0.35s;
             }
         }
     }
     .socialLinks {
-       margin-top: 150px;
-       display: flex;
-       flex-direction: column;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
 
-       .social{
-           padding:10px;
-           margin:12px;
-       }
+        .social {
+            padding: 10px;
+            margin: 12px;
+        }
     }
     .expandIcon {
         font-size: 36px;

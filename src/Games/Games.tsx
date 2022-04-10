@@ -1,26 +1,31 @@
 import { useState } from 'react';
 import './Games.scss'
 
+interface ListStyle{
+  z: number;
+  right:number;
+  width: number;
+}
+
 const Games = () => {
   // Controll the state of being hovered (or not)
   const [isHovered, setHover] = useState(false);
 
-  const liZIndexes: any = [{z:40, right:500, width:600}, {z:35, right:375, width:600}, {z:30, right:250, width:600}, {z:25, right:125, width:600}, {z:20, right:0, width:600}];
+  const liStyles: ListStyle[]= [{z:40, right:500, width:600}, {z:35, right:375, width:600}, {z:30, right:250, width:600}, {z:25, right:125, width:600}, {z:20, right:0, width:600}];
 
   const handleMouseEnter = (e: any): void => {
     setHover(false)
     if(!isHovered){
       const allElems = document.querySelectorAll(".gamesLi")
       allElems.forEach((element:any, index:number) => {
-        element.style.right = `${liZIndexes[index].right}px`;
-        console.log(element.style.right, liZIndexes[index].right)
-        element.style.zIndex = liZIndexes[index].z;
+        element.style.right = `${liStyles[index].right}px`;
+        console.log(element.style.right, liStyles[index].right)
+        element.style.zIndex = liStyles[index].z;
       });
       console.log(allElems)
   
       const thisElement = e.target;
       thisElement.style.zIndex = 2000;
-      //thisElement.style.width = "1255px"
       // Below basicly needs to get the outerWidth and subtract the WIDTH of element <right now its hardcoded>
       thisElement.style.right = `${window.outerWidth - 700}px`;
       setHover(true);
