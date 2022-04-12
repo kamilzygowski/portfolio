@@ -1,0 +1,49 @@
+.GamesSection{
+
+    .allGamesUl{
+        position: absolute;
+        display: flex;
+        flex-direction: row-reverse;
+        bottom:0;
+        right:0;
+        list-style: none;
+        height:100%;
+        width: 100%;
+        margin:auto;
+        align-items: center;
+        background: yellow;
+        .allGamesLi{
+            width:100px;
+            height:100%;
+            background: tan;
+            margin-inline: 5px;
+            transition: 1.2s ease-in-out;
+
+            &:nth-of-type(1){
+                background: url("https://i.postimg.cc/X7kRZsKC/ms.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            &:nth-of-type(2){
+                background: url("https://i.postimg.cc/90GvYpvs/de.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-of-type(3){
+                background: url("https://i.postimg.cc/tRWQbqYD/ingo.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-of-type(4){
+                background: url("https://i.postimg.cc/90GvYpvs/de.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}

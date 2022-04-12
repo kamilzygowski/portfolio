@@ -2,6 +2,10 @@ import React from 'react'
 import './About.scss'
 
 const About = () => {
+
+const preventEvents = (e:any) => {
+  e.preventDefault();
+}
   return (
     <div className='About'>
       {/*<p className='about'>
@@ -11,9 +15,9 @@ const About = () => {
   watching anime , coding and of course both playing and making computer games!</p>*/}
   <img className='aboutHello' src="https://i.postimg.cc/wxkksp9r/portfolio-hello.png" alt="Hello"/>
 
-  <div className='imKamil'><iframe src="https://streamable.com/e/kdejkw?autoplay=1&nocontrols=1"width="100%" height="100%" allow="autoplay"></iframe></div>
-  <div className='livingInGdansk'><iframe src="https://streamable.com/e/szx32y?autoplay=1&nocontrols=1"width="100%" height="100%" allow="autoplay"></iframe></div>
-    </div>
+  <div className='imKamil' onClick={(e:any) => preventEvents(e)}><iframe src="https://streamable.com/e/kdejkw?autoplay=1&nocontrols=1"width="100%" height="100%" allow="autoplay"></iframe></div>
+  <div className='livingInGdansk'><iframe src="https://streamable.com/e/bezfkl?autoplay=1&nocontrols=1" width="100%" height="100%" allow="autoplay"></iframe></div>
+</div>
   )
 }
 

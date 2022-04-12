@@ -8,6 +8,7 @@ import 'swiper/css';
 import Games from '../Games/Games';
 import Sidebar from '../Sidebar/Sidebar';
 import Contact from '../Contact/Contact';
+import GamesSection from '../GamesSection/GamesSection';
 
 const App = () => {
   return (
@@ -32,6 +33,9 @@ const App = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Projects />
+        </SwiperSlide>
+        <SwiperSlide>
+          <GamesSection />
         </SwiperSlide>
         <SwiperSlide>
           <Games />
