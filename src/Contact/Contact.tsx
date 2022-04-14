@@ -1,13 +1,27 @@
 import React from 'react'
+import './Contact.scss'
 
 const Contact = () => {
+  const handleFocus = (e:any) => {
+    const inputs = document.querySelectorAll(".input")
+    inputs.forEach((element) => {
+      if(element.classList.contains('focused')){
+        element.classList.remove('focused');
+      }
+    })
+    // Then add focused class
+    if(e.target.classList.contains('input')){
+      e.target.classList.add('focused');
+    }
+  }
   return (
-    <div className="Contact">
-          <form className='mailerForm'>
-          <input className='mailerName' type="text" placeholder='Your name...'></input>
-      <input className='mailerSubject' type="text" placeholder='E-mail subject...'></input>
-      <input className='mailerMessage' type="textarea" placeholder='Message...'></input>
-      <button type="submit" className='mailerSubmit'>Send</button>
+    <div className="Contact" onClick={(e) => handleFocus(e)}>
+      <h2 className='contactHeader'>Contact me</h2>
+      <form className='mailerForm'>
+        <input className='mailerName input' type="text" placeholder='Insert your name' onFocus={(e:any) => handleFocus(e)}></input>
+        <input className='mailerSubject input' type="text" placeholder='Insert subject' onFocus={(e:any) => handleFocus(e)}></input>
+        <textarea className='mailerMessage input' placeholder='Write a message' onFocus={(e:any) => handleFocus(e)}></textarea>
+        <button type="submit" className='mailerSubmit'>Send Message</button>
       </form>
     </div>
   )

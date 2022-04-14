@@ -6,8 +6,8 @@ const GamesSection = () => {
     const onHover = (e: any) => {
         allElems.forEach((element: any, index:number) => {
             element.style.width = '100px';
-            //console.log(element.childNodes[0])
-            element.childNodes[0].classList.add('hidden')
+            console.log(element.children[0])
+            element.children[0].classList.add('hidden')
            // element.children.classList.add('hidden')
            //element.childNodes.className = "infoBody hidden"
            if(index ===0){
@@ -29,6 +29,7 @@ const GamesSection = () => {
            }
         })
         console.log(e.target.childNodes[0])
+        console.log(e.target)
         e.target.childNodes[0].classList.remove('hidden')
         e.target.style.width = '100%';
         e.target.style.background = 'indigo';

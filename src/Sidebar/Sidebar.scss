@@ -1,6 +1,6 @@
 .Sidebar {
     position: absolute;
-    left: -90px;
+    left: -105px;
     z-index: 4;
     height: 100vh;
     display: flex;
@@ -38,8 +38,10 @@
         }
     }
     .expandIcon {
-        font-size: 36px;
+        font-size: 48px;
         color: rgba(255, 255, 255, 0.4);
+        padding-left: 25px;
+        text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
         &:hover {
             color: #000;
             transition: 0.15s;

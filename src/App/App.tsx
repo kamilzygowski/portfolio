@@ -35,9 +35,6 @@ const App = () => {
           <Projects />
         </SwiperSlide>
         <SwiperSlide>
-          <GamesSection />
-        </SwiperSlide>
-        <SwiperSlide>
           <Games />
         </SwiperSlide>
         <SwiperSlide>
