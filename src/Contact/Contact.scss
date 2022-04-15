@@ -9,6 +9,10 @@
         font-size:64px;
     }
 
+    .header{
+        margin-top:50px;
+    }
+
     .mailerForm{
         margin-top:105px;
         display: flex;
@@ -79,12 +83,13 @@
             height:95px;
             border:none;
             border-radius: 15px;
-            font-size:38px;
+            font-size:42px;
             background-color: #ff9ff3;
             font-family: "Katibeh", cursive;
+            font-weight: bold;
             &:hover{
                 
-                animation: 0.3s submit infinite ease-in-out;
+                animation: .4s submit infinite ease-in-out;
                 transition: 7s;
             }
         }
@@ -100,15 +105,13 @@
 
 @keyframes submit {
     0%{
-        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,255,1) 37%, rgba(0,255,255,1) 100%);
+        background: linear-gradient(355deg, rgba(255,255,255,1) 0%, rgba(255,0,255,1) 37%, rgba(0,255,255,1) 100%);
     }
-    33%{
-        background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(255,0,255,1) 37%, rgba(0,255,255,1) 100%);
-    }
-    66%{
-        background: linear-gradient(240deg, rgba(255,255,255,1) 0%, rgba(255,0,255,1) 37%, rgba(0,255,255,1) 100%);
+    50%{
+        background: linear-gradient(355deg, rgb(241, 171, 171) 0%, rgb(101, 189, 43) 37%, rgb(46, 4, 102) 100%);
     }
     100%{
-        background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,0,255,1) 37%, rgba(0,255,255,1) 100%);
+        background: linear-gradient(355deg, rgb(252, 248, 31) 0%, rgb(81, 243, 216) 37%, rgb(48, 243, 145) 100%);
     }
+
 }

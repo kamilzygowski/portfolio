@@ -13,8 +13,8 @@ const preventEvents = (e:any) => {
       </p>
       <p>I love : juggling , making PixelArt-style graphics , learning about human perception , 
   watching anime , coding and of course both playing and making computer games!</p>*/}
-  <img className='aboutHello' src="https://i.postimg.cc/wxkksp9r/portfolio-hello.png" alt="Hello"/>
-
+  <img className='aboutHello' src="https://i.postimg.cc/J4YM94J7/portfolio-hello-1.png" alt="Hello"/>
+<div className='mirror'></div>
   <div className='imKamil' onClick={(e:any) => preventEvents(e)}><iframe src="https://streamable.com/e/kdejkw?autoplay=1&nocontrols=1"width="100%" height="100%" allow="autoplay"></iframe></div>
   <div className='livingInGdansk'><iframe src="https://streamable.com/e/bezfkl?autoplay=1&nocontrols=1" width="100%" height="100%" allow="autoplay"></iframe></div>
 </div>

@@ -27,13 +27,17 @@ const Games = () => {
     setHover(false)
     if (!isHovered) {
       allElems.forEach((element: any, index: number) => {
-        element.style.bottom = `${liStyles[index].bottom}px`;
-        console.log(element.style.right, liStyles[index].right)
-      });
-      console.log(allElems)
-      const thisElement = e.target;
+        if(element.style.bottom !== `${liStyles[index].bottom}px`){
+          element.style.bottom = `${liStyles[index].bottom}px`;
+        }  
+        //console.log(element.style.right, liStyles[index].right)
+      });    
+      const thisElement:any = allElems[e.target.id-1];
       // Below basicly needs to get the outerWidth and subtract the WIDTH of element <right now its hardcoded>
-      thisElement.style.bottom = `${450}px`;
+      if(thisElement !== undefined){
+        thisElement.style.bottom = `${450}px`;
+        
+      }
       setHover(true);
     }
 
@@ -49,24 +53,24 @@ const Games = () => {
             {isClicked ? <PopUp></PopUp> : null}
       <ul className='gamesUl'>
         {/* TITLE LINK*/}
-        <li onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} onClick={() => setClick(true)} className='gamesLi' id="1">
-          <div className='gameInfo'><h3>Welcome to games section!</h3></div>
+        <li className='gamesLi' id="1">
+          <div id="1" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} onClick={() => setClick(true)} ><h3>Welcome to games section!</h3></div>
         </li>
         {/* DIMENSION EYE */}
-        <li onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gamesLi' id="2">
-          <div className='gameInfo'><h3>Dimension Eye</h3></div>
+        <li className='gamesLi' id="2">
+          <div id="2" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'><h3>Dimension Eye</h3></div>
         </li>
         {/* MOUSE SABRE */}
-        <li onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gamesLi' id="3">
-          <div className='gameInfo'><h3>Mouse sabre</h3></div>
+        <li className='gamesLi' id="3">
+          <div id="3" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'><h3>Mouse sabre</h3></div>
         </li>
         {/*MILION LASERS */}
-        <li onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gamesLi' id="4">
-          <div className='gameInfo'><h3>milion lasers</h3></div>
+        <li className='gamesLi' id="4">
+          <div id="4" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'><h3>milion lasers</h3></div>
         </li>
         {/* IT'S GONNA BE OK. */}
-        <li onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gamesLi' id="5">
-          <div className='gameInfo'><h3>it's gonna be ok</h3></div>
+        <li className='gamesLi' id="5">
+          <div id="5" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'><h3>it's gonna be ok</h3></div>
         </li>
       </ul>
     </div>

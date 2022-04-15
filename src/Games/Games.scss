@@ -1,7 +1,11 @@
 .Games{
     height:100vh;
     width:100vw;
-    background: lightsalmon;
+    background: url("https://i.postimg.cc/02Hdr3h5/27-Converted.png");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: top;
+    background-color: lightsalmon;
 
     .gamesUl{
         position: absolute;
@@ -21,10 +25,12 @@
         height:80%;
         width:400px;
         color:#000;
-        
         background-color: red;
         position: inherit;
         transition: ease-out 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
      
         &:nth-of-type(1){
             z-index: 40;
@@ -89,5 +95,11 @@
         .fifthP{
             right:200px;
         }
+    }
+    .gameInfo{
+        //background-color: red;
+        width:180px;
+        height:70%;
+        margin-top: 15vh;
     }
 }

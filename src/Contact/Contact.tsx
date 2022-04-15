@@ -16,7 +16,7 @@ const Contact = () => {
   }
   return (
     <div className="Contact" onClick={(e) => handleFocus(e)}>
-      <h2 className='contactHeader'>Contact me</h2>
+      <img src="https://i.postimg.cc/02tWmxGq/contact.png" alt="header" className='contactHeader'/>
       <form className='mailerForm'>
         <input className='mailerName input' type="text" placeholder='Insert your name' onFocus={(e:any) => handleFocus(e)}></input>
         <input className='mailerSubject input' type="text" placeholder='Insert subject' onFocus={(e:any) => handleFocus(e)}></input>

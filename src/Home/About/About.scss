@@ -4,9 +4,10 @@
     flex: 1;
     text-align: center;
     background: #490b66;
-    padding: 50px;
+    padding: 20px;
     font-family: "Kavoon", cursive;
     letter-spacing: 3px;
+    
 
     .aboutHello {
         width: 50%;
@@ -58,4 +59,10 @@
 
 .media-container{
     border: none;
+}
+
+.mirror{
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
