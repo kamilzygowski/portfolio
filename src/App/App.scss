@@ -12,3 +12,16 @@
 .swiper-pagination{
  
 }
+
+.bars{
+  position:fixed;
+  right:65px;
+  top:65px;
+  z-index: 4000;
+  font-size: 46px;
+  display: none;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}

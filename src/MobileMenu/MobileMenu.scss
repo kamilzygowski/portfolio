@@ -1,0 +1,21 @@
+.MobileMenu{
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    background-color: red;
+    z-index: 4000;
+
+    .mobileUl{
+        list-style: none;
+        bottom:0;
+        top:0;
+        margin:auto;
+        letter-spacing: 2px;
+
+        .mobileLi{
+            margin-block:30px;
+            font-size:36px;
+            font-weight: bold;
+        }
+    }
+}
