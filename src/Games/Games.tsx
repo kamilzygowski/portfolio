@@ -12,12 +12,12 @@ interface ListStyle {
 const Games = () => {
   const gamesInfoArr = [{
     title: 'Dimension Eye', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    img: 'https://i.postimg.cc/vHrrQTby/deprev.png', href: 'https://swedishsailor.github.io/dimensioneye/'
+    techstack:['Unity'], img: 'https://i.postimg.cc/vHrrQTby/deprev.png', href: 'https://swedishsailor.github.io/dimensioneye/'
   },
-  { title: 'Mouse Sabre', description: 'XDDDDD', img: 'https://i.postimg.cc/13BhsVGk/mousesabre.png', href: 'https://swedishsailor.github.io/mousesabre/' },
-  { title: 'Milion Lasers', description: 'XDDD', img: 'https://i.postimg.cc/fT4hKNWr/milion-lasers.png', href: 'https://swedishsailor.github.io/milionlasers/' },
-  { title: `It's gonna be ok`, description: 'XDDD', img: 'https://i.postimg.cc/MKyJ3FvK/itsgonnabeok.png', href: 'https://marcodeevil.github.io/KRZYKAM-LD50/' },
-  { title: 'Multi Arena', description: 'XDDDDDD', img: 'https://i.postimg.cc/Bn49rBK5/multiarena.png', href: 'https://swedishsailor.github.io/multiarena/' }]
+  { title: 'Mouse Sabre', description: 'XDDDDD', techstack:['TypeScript', 'NodeJS', 'MySQL'], img: 'https://i.postimg.cc/13BhsVGk/mousesabre.png', href: 'https://swedishsailor.github.io/mousesabre/' },
+  { title: 'Milion Lasers', description: 'XDDD', techstack:['Unity'], img: 'https://i.postimg.cc/fT4hKNWr/milion-lasers.png', href: 'https://swedishsailor.github.io/milionlasers/' },
+  { title: `It's gonna be ok`, description: 'XDDD', techstack:['JavaScript'], img: 'https://i.postimg.cc/MKyJ3FvK/itsgonnabeok.png', href: 'https://marcodeevil.github.io/KRZYKAM-LD50/' },
+  { title: 'Multi Arena', description: 'XDDDDDD', techstack:['JavaScript', 'NodeJS'], img: 'https://i.postimg.cc/Bn49rBK5/multiarena.png', href: 'https://swedishsailor.github.io/multiarena/' }]
   const allElems = document.querySelectorAll(".gamesLi")
   const liStyles: ListStyle[] = [{ z: 45, right: 750, width: 600, bottom: -65 },
   { z: 40, right: 600, width: 600, bottom: 0 },
@@ -56,9 +56,9 @@ const Games = () => {
         {isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null}
         <ul className='gamesUl'>
           {/* TITLE LINK*/}
-          <li className='gamesLi' id="1">
+          {/*<li className='gamesLi' id="1">
             <div id="1" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}></div>
-          </li>
+          </li>*/}
           <li className='gamesLi' id="2">
             <div id="2" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}
               onClick={(e: any) => {

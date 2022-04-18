@@ -27,11 +27,12 @@
         .descriptionImg{
             flex:1;
             object-fit: cover;
-            clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 18% 51%, 0% 0%);
-            width:50%;
+            clip-path: polygon(100% 0%, 100% 46%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+            width:20%;
             border-radius: 15px;
 
             &:hover{
+                clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 18% 51%, 0% 0%);
                 width:80%;
                 transition: 0.7s ease-out;
                 animation: img 0.9s infinite;
@@ -40,8 +41,22 @@
 
         }
     }
+
+    .techstackUl{
+        list-style: none;
+
+        .techstack{
+            font-size:33px;
+            font-family: 'Chicle', cursive;
+            font-size:54px;
+            letter-spacing: 3px;
+            margin-block: 14px;
+        }
+    }
+
 }
 .text{
+    flex:4;
     h2{
         padding:25px;
         margin-top:105px;

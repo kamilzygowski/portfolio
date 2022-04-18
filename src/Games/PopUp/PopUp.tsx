@@ -8,6 +8,11 @@ const PopUp = (props: any) => {
         <div className='info'>
           <div className='text'>
             <h2> {props.gameInfo.title} </h2>
+            <ul className='techstackUl'>
+              {props.gameInfo.techstack.map((element: any) => {
+               return <li className='techstack'>{element}</li>
+              })}
+            </ul>
             <p className='description'>
               {props.gameInfo.description}
             </p>

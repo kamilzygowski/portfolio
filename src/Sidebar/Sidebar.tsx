@@ -30,7 +30,7 @@ const Sidebar = () => {
           <SocialIcon url="https://www.instagram.com/szwedzkimarynarz/" className='social' />
         </div>
       </div>
-      <FontAwesomeIcon icon={faChevronRight} className="expandIcon" onMouseEnter={() => toggleSidebar()} />
+      <FontAwesomeIcon icon={faChevronRight} className="expandIcon" onMouseEnter={() => toggleSidebar()} onClick={() => toggleSidebar()} />
     </div>
   )
 }
