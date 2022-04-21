@@ -59,44 +59,44 @@ const Games = () => {
           {/*<li className='gamesLi' id="1">
             <div id="1" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}></div>
           </li>*/}
-          <li className='gamesLi' id="2">
-            <div id="2" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}
-              onClick={(e: any) => {
+          <li className='gamesLi' id="2" onClick={(e: any) => {
                 setGameInfo(gamesInfoArr[e.target.id - 2])
                 setClick(true)
-              }} ></div>
+              }}>
+            <div id="2" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}
+               ></div>
           </li>
           {/* DIMENSION EYE */}
-          <li className='gamesLi' id="3">
-            <div id="3" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              onClick={(e: any) => {
+          <li className='gamesLi' id="3" onClick={(e: any) => {
                 setGameInfo(gamesInfoArr[e.target.id - 2])
                 setClick(true)
-              }}></div>
+              }}>
+            <div id="3" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
+              ></div>
           </li>
           {/* MOUSE SABRE */}
-          <li className='gamesLi' id="4">
-            <div id="4" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              onClick={(e: any) => {
+          <li className='gamesLi' id="4" onClick={(e: any) => {
                 setGameInfo(gamesInfoArr[e.target.id - 2])
                 setClick(true)
-              }}></div>
+              }}>
+            <div id="4" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
+              ></div>
           </li>
           {/*MILION LASERS */}
-          <li className='gamesLi' id="5">
-            <div id="5" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              onClick={(e: any) => {
+          <li className='gamesLi' id="5" onClick={(e: any) => {
                 setGameInfo(gamesInfoArr[e.target.id - 2])
                 setClick(true)
-              }}></div>
+              }}>
+            <div id="5" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
+              ></div>
           </li>
           {/* IT'S GONNA BE OK. */}
-          <li className='gamesLi' id="6">
-            <div id="6" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              onClick={(e: any) => {
+          <li className='gamesLi' id="6" onClick={(e: any) => {
                 setGameInfo(gamesInfoArr[e.target.id - 2])
                 setClick(true)
-              }}></div>
+              }}>
+            <div id="6" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
+              ></div>
           </li>
         </ul>
       </div>

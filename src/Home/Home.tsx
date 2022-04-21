@@ -6,7 +6,7 @@ import About from './About/About';
 
 const Home = () => {
   return (
-    <div className='Home'>
+    <div className='Home' id="home">
       <div className='main'>
         <About />
         <Hero />

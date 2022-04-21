@@ -69,6 +69,7 @@ const Hero = () => {
 
     return (
         <div className='Hero'>
+            <div className='backgroundImg'>
             <div className='info'>
                 <div className='skillsImages'>
                     <ul className='list' ref={function (element: any) { setCircleContainer(element) }}>
@@ -83,6 +84,8 @@ const Hero = () => {
                     </ul>
                 </div>
             </div>
+            </div>
+
         </div>
     )
 }

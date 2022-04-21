@@ -1,7 +1,7 @@
 .Home{
     height:100vh;
     width:100vw;
-    background: #ba6ed6;
+    
     align-content: center;
     display: flex;
     .header{
@@ -17,7 +17,7 @@
     margin: auto;
     //box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     border-radius: 3.8px;
-    background:#ba6ed6;
+    background: linear-gradient(270deg, rgba(73,11,102,1) 65%, rgba(186,110,214,1) 66%);
     background-size: cover;
     display: flex;
     flex-direction: row;

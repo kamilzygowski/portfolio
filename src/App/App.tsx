@@ -12,11 +12,14 @@ import GamesSection from '../GamesSection/GamesSection';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { animateScroll as scroll, scroller, Element, Link } from 'react-scroll';
 
 const App = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <div className='App'>
+            <HashRouter>
       <FontAwesomeIcon icon={faBars} className="bars" onClick={() => setMobileMenu(true)}/>
       {mobileMenu ? <MobileMenu/> : null}
       <Sidebar/>
@@ -34,12 +37,18 @@ const App = () => {
         observer={true}
         className="mySwiper"
       >
-        <SwiperSlide>
+          <SwiperSlide>
+          <Element name="home" id="home">
           <Home />
-        </SwiperSlide>
+          </Element>
+          </SwiperSlide>
+        <Element name="projects" id="projects">
         <SwiperSlide>
           <Projects />
         </SwiperSlide>
+        </Element>
+
+
         <SwiperSlide>
           <Games />
         </SwiperSlide>
@@ -47,6 +56,9 @@ const App = () => {
           <Contact />
         </SwiperSlide>
       </Swiper>
+      <Routes>
+        <Route path="home" element={<Home/>}/>
+        </Routes></HashRouter>
     </div>
   )
 }
