@@ -5,6 +5,13 @@
     background-color: red;
     z-index: 4000;
 
+    .close{
+        position: fixed;
+        right:65px;
+        top:65px;
+        font-size:48px;
+    }
+
     .mobileUl{
         list-style: none;
         bottom:0;

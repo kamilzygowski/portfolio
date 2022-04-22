@@ -13,11 +13,34 @@
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: top;
-
+    @media (max-width:2300px) and (min-width:2000px) {
+        background-size: 120%;
+    }
+    @media (max-width:2000px) and (min-width:1700px) {
+        background-size: 130%;
+    }
+    @media (max-width:1700px) and (min-width:1285px) {
+        background-size: 140%;
+    }
+    @media (max-width:1285px) and (min-width:800px) {
+        background-size: 180%;
+    }
     .gamesHeader{
         position: absolute;
         left:115px;
         top:65px;
+        @media (max-width:2300px) and (min-width:2000px) {
+            width:1100px;
+        }
+        @media (max-width:2000px) and (min-width:1700px) {
+            width:1000px;
+        }
+        @media (max-width:1700px) and (min-width:1285px) {
+            width:935px;
+        }
+        @media (max-width:1285px) and (min-width:800px) {
+            width:700px;
+        }
     }
 
     .gamesUl{
@@ -46,11 +69,18 @@
         align-items: flex-end;
         padding-bottom: 1000px;
 
-        @media (max-width:1285px) and (min-width:1000px) {
+        @media (max-width:2300px) and (min-width:2000px) {
+            width:300px;
+        }
+        @media (max-width:2000px) and (min-width:1700px) {
+            width:280px;
+        }
+        @media (max-width:1700px) and (min-width:1285px) {
             width:200px;
         }
-
-     
+        @media (max-width:1285px) and (min-width:800px) {
+            width:160px;
+        }
         /*&:nth-of-type(1){
             z-index: 45;
             right:1090px;
@@ -70,6 +100,12 @@
             background:url("https://i.postimg.cc/0yDKct2P/deeee.png");
             background-size: contain;
             background-repeat: no-repeat;
+            @media (max-width:1700px) and (min-width:1285px) {
+                right:590px;
+            }
+            @media (max-width:1285px) and (min-width:800px) {
+                right:480px;
+            }
             &:hover{
                 bottom:-700px;
             }
@@ -81,6 +117,12 @@
             background:url("https://i.postimg.cc/WbQsYThJ/mouse-Sabre-Img.png");
             background-size: contain;
             background-repeat: no-repeat;
+            @media (max-width:1700px) and (min-width:1285px) {
+                right:390px;
+            }
+            @media (max-width:1285px) and (min-width:800px) {
+                right:330px;
+            }
             &:hover{
                 bottom:-630px;
             }
@@ -92,6 +134,12 @@
             background:url("https://i.postimg.cc/m2Nyr2CQ/milionlasers.png");
             background-size: contain;
             background-repeat: no-repeat;
+            @media (max-width:1700px) and (min-width:1285px) {
+                right:190px;
+            }
+            @media (max-width:1285px) and (min-width:800px) {
+                right:180px;
+            }
             &:hover{
                 bottom:-570px;
             }
@@ -103,6 +151,12 @@
             background:url("https://i.postimg.cc/Jh6G6SJD/itsgonnabeok.png");
             background-size: contain;
             background-repeat: no-repeat;
+            @media (max-width:1700px) and (min-width:1285px) {
+                right:-10px;
+            }
+            @media (max-width:1285px) and (min-width:800px) {
+                right:30px;
+            }
             &:hover{
                 bottom:-505px;
             }
@@ -114,6 +168,12 @@
             background:url("https://i.postimg.cc/8cnDdVrw/multiarena.png");
             background-size: contain;
             background-repeat: no-repeat;
+            @media (max-width:1700px) and (min-width:1285px) {
+                right:-210px;
+            }
+            @media (max-width:1285px) and (min-width:800px) {
+                right:-120px;
+            }
             &:hover{
                 bottom:-440px;
             }

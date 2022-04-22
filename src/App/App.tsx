@@ -11,10 +11,12 @@ import Contact from '../Contact/Contact';
 import GamesSection from '../GamesSection/GamesSection';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBabyCarriage, faBarChart, faBarcode, faBars, faBarsProgress, faBarsStaggered, faBraille, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faChartBar } from '@fortawesome/free-regular-svg-icons';
 
 const App = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [changedIcon, setIconChange] = useState(false);
   const prevRef = useRef(null)
   const nextRef = useRef(null)
   setTimeout(() => {
@@ -23,8 +25,8 @@ const App = () => {
   }, 5000)
   return (
     <div className='App'>
-      <FontAwesomeIcon icon={faBars} className="bars" onClick={() => setMobileMenu(true)}/>
-      {mobileMenu ? <MobileMenu/> : null}
+      <FontAwesomeIcon icon={changedIcon ? faStar : faBarsStaggered} className="bars" onClick={() => setMobileMenu(true)} onMouseEnter={() => setIconChange(true)} onMouseLeave={() => setIconChange(false)}/>
+      {mobileMenu ? <MobileMenu setMobileMenu={setMobileMenu}/> : null}
       <Sidebar/>
       <Swiper
         direction={"horizontal"}
