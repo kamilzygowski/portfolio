@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel } from 'swiper';
 import Home from '../Home/Home'
@@ -17,6 +17,12 @@ import { animateScroll as scroll, scroller, Element, Link } from 'react-scroll';
 
 const App = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
+  setTimeout(() => {
+    console.log(nextRef)
+
+  }, 5000)
   return (
     <div className='App'>
             <HashRouter>
@@ -28,10 +34,8 @@ const App = () => {
         slidesPerView={1}
         //spaceBetween={30}
         mousewheel={true}
-        pagination={{
-          clickable: true,
-          type: "progressbar",
-        }}
+    // Tring to get the refferences
+
         modules={[Mousewheel, Pagination]}
         observeParents={true}
         observer={true}
