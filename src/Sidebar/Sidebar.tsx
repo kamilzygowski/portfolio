@@ -3,7 +3,6 @@ import './Sidebar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChessRook, faChevronRight, faCode, faEnvelope, faEye, faGamepad, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { SocialIcon } from 'react-social-icons';
-import { animateScroll as scroll, scroller, Element, Link } from 'react-scroll';
 
 const Sidebar = () => {
   const [container, setContainer] = useState<any>(null);
