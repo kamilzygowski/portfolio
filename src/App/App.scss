@@ -22,7 +22,8 @@
   display: none;
   transform: rotate(0);
   color:inherit;
-  animation: barsAnim 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 8s ease -1.25s infinite;;
+  animation: barsAnim 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 8s ease -1.25s infinite;
+  cursor: pointer;
 
   &:hover{
     animation: barsHoverAnim 1.5s infinite;

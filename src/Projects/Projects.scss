@@ -1,14 +1,129 @@
-.Projects{
-    height:100vh;
-    width:100vw;
+.Projects {
+    height: 100vh;
+    width: 100vw;
     //background:#5352ed;
-    background: #2BBEB2;
+    background: #2bbeb2;
 
-    .project{
-        width:90%;
-        height:90%;
+    h3 {
+        margin: 0;
+        padding-block: 50px;
+    }
+
+    .interactivePortfolio {
+        img {
+            width: 450px;
+            border-radius: 15px;
+            height: 95px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+
+    .projectsList {
+        padding: 100px;
+        width: 90%;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .window {
+            width: 550px;
+            height: 450px;
+            margin: 25px;
+
+            .topBar {
+                margin-left: -2px;
+                margin-top: -1px;
+                width: 550px;
+                height: 45px;
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 84, 227, 1) 16%,
+                    rgba(0, 88, 230, 1) 29%,
+                    rgba(3, 101, 241, 1) 45%,
+                    rgba(17, 116, 246, 1) 63%,
+                    rgba(43, 144, 255, 1) 81%,
+                    rgba(63, 151, 255, 1) 94%
+                );
+                z-index: 15;
+                border-radius: 6.5px;
+                border: 1px solid #0043cf;
+                border-bottom: 2px solid #000;
+                display: flex;
+                flex-direction: row-reverse;
+
+                .Btn {
+                    margin-top: 2px;
+                    width: 38px;
+                    height: 38px;
+                    background-color: rebeccapurple;
+                    margin-inline: 3px;
+                    border-radius: 7px;
+
+                    &:nth-of-type(1) {
+                        margin-right: 20px;
+                    }
+                    &:hover {
+                        opacity: 0.15;
+                        transition: 0.4s;
+                    }
+                }
+                .closeBtn {
+                    background-color: #d8370e;
+                    border: 1px solid #fff;
+                    background: url("https://i.postimg.cc/rpX1yFnB/close.png");
+                    background-position: center;
+                }
+                .maxBtn {
+                    background: url("https://i.postimg.cc/3R32pfH9/maxim.png");
+                    border: 1px solid #fff;
+                    background-position: center;
+                }
+                .minBtn {
+                    background: url("https://i.postimg.cc/Hxm9zsbw/Sprite-0002.png");
+                    background-position: center;
+                    border: 1px solid #fff;
+                }
+            }
+
+            .frame {
+                height: inherit;
+                width: inherit;
+                clip-path: polygon(
+                    0% 0%,
+                    0% 100%,
+                    3% 99%,
+                    3% 14%,
+                    98% 14%,
+                    98% 98%,
+                    1% 98%,
+                    0 100%,
+                    100% 100%,
+                    100% 0%
+                );
+                clip-path: polygon(0% 0%, 0% 100%, 3% 97%, 3% 13%, 97% 13%, 97% 97%, 0 97%, 0 100%, 100% 100%, 100% 0%);
+                background-color: #ece9d8;
+                border: 2px solid #000;
+                border-radius: 7.5px;
+            }
+
+            img {
+                margin-top: -400px;
+                margin-bottom: 35px;
+                border-radius: 10.5px;
+                width: 526px;
+                height: 393px;
+                object-fit: cover;
+                border: 2px solid #000;
+            }
+        }
+    }
+    .iproject {
+        width: 90%;
+        height: 90%;
         border: none;
-        margin-top:5vh;
+        margin-top: 5vh;
         border-radius: 10px;
     }
 }

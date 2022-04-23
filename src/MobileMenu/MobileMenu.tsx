@@ -7,10 +7,10 @@ const MobileMenu = (props:any) => {
   return (
     <div className='MobileMenu'>
         <ul className='mobileUl'>
-            <li className='mobileLi'><FontAwesomeIcon icon={faHome}/> Home</li>
-            <li className='mobileLi'><FontAwesomeIcon icon={faCode}/> Projects</li>
-            <li className='mobileLi'><FontAwesomeIcon icon={faGamepad}/> Games</li>
-            <li className='mobileLi'><FontAwesomeIcon icon={faEnvelope}/> Contact</li>
+            <li className='mobileLi'><div className='background'></div><FontAwesomeIcon className='icon' icon={faHome}/> <p>Home</p></li>
+            <li className='mobileLi'><div className='background'></div><FontAwesomeIcon className='icon' icon={faCode}/> <p>Projects</p></li>
+            <li className='mobileLi'><div className='background'></div><FontAwesomeIcon className='icon' icon={faGamepad}/> <p>Games</p></li>
+            <li className='mobileLi'><div className='background'></div><FontAwesomeIcon className='icon' icon={faEnvelope}/><p>Contact</p></li>
         </ul>
         <FontAwesomeIcon icon={faXmark} className="close" onClick={() => props.setMobileMenu(false)}/>
     </div>
