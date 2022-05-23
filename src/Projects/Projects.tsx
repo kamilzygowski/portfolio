@@ -1,5 +1,8 @@
 import React, { useRef, useState } from 'react'
 import './Projects.scss'
+import Draggable from 'react-draggable'
+import { resolve } from 'path';
+import { rejects } from 'assert';
 
 interface Project {
     src: string;
@@ -36,7 +39,7 @@ const Projects = () => {
             ...array
         ])
     }
-    const handleUnMinimize = (id:any, key:any) => {
+    const handleUnMinimize = (id: any, key: any) => {
         const newItem: any = initialProjects[id];
         //const newItem: any = minimizedWindow[id];
         // First delete the minimized icon 
@@ -70,6 +73,20 @@ const Projects = () => {
     const handleMaximize = () => {
         // On maximize we will create the window on almost whole screen displaying project info
     }
+    
+     const changeIndexZToMax = (e: any) => {
+        const allWindows: any = document.querySelectorAll('.window')
+        // At first change all windows Z Index to 50
+        for (const window of allWindows) {
+            console.log(window.style.zIndex)
+            window.style.zIndex = 50;
+        }
+        // Then make THIS window Z Index 250
+        allWindows[e.target.id].style.zIndex = 250;
+        for (const window of allWindows) {
+            console.log(window.style.zIndex);
+        }
+    }
     return (
         <div className='Projects'>
             {/*<iframe src="https://swedishsailor.github.io/portfolio-game/" className='iproject' title='portfolio game' />*/}
@@ -81,19 +98,29 @@ const Projects = () => {
             <div className='projectsList' ref={windowElement}>
                 {projects.map((element: any, index: number) => {
                     return (
-                        <div className='window' draggable={true} id={index.toString()} key={index}>
-                            <div className='frame'>
-                                <div className='topBar' draggable={true} onDragStart={(e) => handleWindowMove(e)}>
-                                    <div className='Btn closeBtn' id={index.toString()} onClick={(e) => handleClose(e)}>
-                                    </div>
-                                    <div className='Btn maxBtn'>
-                                    </div>
-                                    <div onClick={(e) => handleMinimize(e)} className='Btn minBtn' id={index.toString()}>
+                        <Draggable
+                            axis="both"
+                            grid={[2, 2]}
+
+
+                        >
+                            <div className='window' style={{ zIndex: 50 }} id={index.toString()} key={index}
+onClick={(e) => changeIndexZToMax(e)} 
+
+                            >
+                                <div className='frame'>
+                                    <div className='topBar' id={index.toString()} onClick={(e) => {console.log('xd'); changeIndexZToMax(e)}} >
+                                        <div className='Btn closeBtn' id={index.toString()} onClick={(e) => handleClose(e)}>
+                                        </div>
+                                        <div className='Btn maxBtn'>
+                                        </div>
+                                        <div onClick={(e) => handleMinimize(e)} className='Btn minBtn' id={index.toString()}>
+                                        </div>
                                     </div>
                                 </div>
+                                <img src={element.src} alt="project" />
                             </div>
-                            <img src={element.src} alt="project" />
-                        </div>
+                        </Draggable>
                     )
                 })}
                 {/*} <div className='window' draggable={true} id="0">

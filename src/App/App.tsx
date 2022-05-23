@@ -39,6 +39,7 @@ const App = () => {
         observeParents={true}
         observer={true}
         className="mySwiper"
+        allowTouchMove={false}
       >
           <SwiperSlide>
           <Home />
