@@ -18,6 +18,19 @@
         padding-block: 50px;
     }
 
+    .replay{
+        font-size:86px;
+        position: absolute;
+        color: 	#000;
+        opacity: 0.5;
+        animation: rotate 11s infinite ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            animation: rotate 0.5s infinite ease-in-out;
+        }
+    }
+
     .minimizedWindows{
         position: fixed;
         display: flex;
@@ -71,15 +84,17 @@
         flex-wrap: wrap;
 
         .window {
-            width: 550px;
-            height: 450px;
+            width: 1050px;
+            height: 850px;
             margin: 25px;
+
+
 
 
             .topBar {
                 margin-left: -2px;
                 margin-top: -1px;
-                width: 550px;
+                width: 1050px;
                 height: 45px;
                 background: linear-gradient(
                     0deg,
@@ -96,6 +111,24 @@
                 border-bottom: 2px solid #000;
                 display: flex;
                 flex-direction: row-reverse;
+
+                .title{
+                    
+                    text-align: left;
+                    padding-left: 3%;
+                    position: fixed;
+                    left:17px;
+                    top:-12px;
+                    height: 45px;
+                    p {
+                        color:#fff;
+                        font-family: Tahoma, sans-serif;
+                        font-weight: 600;
+                        font-size: 24px;
+                        cursor:default;
+                        letter-spacing: 2px;
+                    }
+                }
 
                 .Btn {
                     margin-top: 2px;
@@ -146,18 +179,18 @@
                     100% 100%,
                     100% 0%
                 );
-                clip-path: polygon(0% 0%, 0% 100%, 1% 99%, 1% 12%, 99% 12%, 99% 98%, 0 98%, 0 100%, 100% 100%, 100% 0%);
+                clip-path: polygon(0% 0%, 0% 100%, 1% 99%, 1% 7%, 99% 7%, 99% 98%, 0 98%, 0 100%, 100% 100%, 100% 0%);
                 background-color: #ece9d8;
                 border: 2px solid #000;
                 border-radius: 7.5px;
             }
 
             img {
-                margin-top: -403px;
+                margin-top: -797px;
                 margin-bottom: 35px;
                 border-radius: 10.5px;
-                width: 548px;
-                height: 397px;
+                width: 1048px;
+                height: 787px;
                 object-fit: cover;
                 border: 2px solid #000;
             }
@@ -174,4 +207,10 @@
 
 .hidden{
     display: none;
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(340deg);
+    }
 }

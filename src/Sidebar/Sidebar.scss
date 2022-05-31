@@ -35,6 +35,11 @@
         .social {
             padding: 10px;
             margin: 12px;
+
+            &:hover{
+                transform: scale(1.4);
+                transition: 0.17s;
+            }
         }
     }
     .expandIcon {
