@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Games.scss'
 import PopUp from './PopUp/PopUp';
 
@@ -10,6 +10,7 @@ interface ListStyle {
 }
 
 const Games = () => {
+  const bookGif:any = React.createElement('img', {src:"https://i.postimg.cc/Jztj2NpP/op.gif", className:'bookGif'})
   const gamesInfoArr = [{
     title: 'Dimension Eye', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     techstack:['Unity'], img: 'https://i.postimg.cc/vHrrQTby/deprev.png', href: 'https://swedishsailor.github.io/dimensioneye/'
@@ -40,8 +41,9 @@ const Games = () => {
   }, [])
 
   const handleMouseEnter = (e: any): void => {
-
-
+    
+  }
+  const handleMouseClick = (e:any): void => {
   }
   const handleMouseLeave = (e: any): void => {
 
@@ -51,53 +53,32 @@ const Games = () => {
 
   return (
     <div className='background'>
+      {isClicked ? <div className='gamesMirror' onClick={() => setClick(false)}/> : null}
+      {isClicked ?  React.createElement('img', {className:'bookGif', src:'https://i.postimg.cc/GtwZMPGf/SHORT.gif', onClick:(e:any) => {
+        setClick(false)
+      }}) : React.createElement('img', {style:{position: 'absolute'}})}
+      {/*isClicked ? <img src='https://i.postimg.cc/GtwZMPGf/SHORT.gif' className='bookGif' alt="" onClick={() => setClick(false)} /> : null*/}
       <div className='Games'>
         <img className='gamesHeader' src="https://i.postimg.cc/zf7HKV0r/games-Header.png"/>
-        {isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null}
+        {/*isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null*/}
         <ul className='gamesUl'>
           {/* TITLE LINK*/}
+          {gamesInfoArr.map((element:any, index:number) => {
+            return(
+            <li className='gamesLi' id={(index+2).toString()} onClick={(e: any) => {
+              setGameInfo(gamesInfoArr[index])
+              setClick(true)
+              handleMouseClick(e)
+            }}>
+          <div id={(index+2).toString()} className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}
+             ></div>
+        </li>
+          )})
+        }
           {/*<li className='gamesLi' id="1">
             <div id="1" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}></div>
           </li>*/}
-          <li className='gamesLi' id="2" onClick={(e: any) => {
-                setGameInfo(gamesInfoArr[e.target.id - 2])
-                setClick(true)
-              }}>
-            <div id="2" className='gameInfo' onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}
-               ></div>
-          </li>
-          {/* DIMENSION EYE */}
-          <li className='gamesLi' id="3" onClick={(e: any) => {
-                setGameInfo(gamesInfoArr[e.target.id - 2])
-                setClick(true)
-              }}>
-            <div id="3" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              ></div>
-          </li>
-          {/* MOUSE SABRE */}
-          <li className='gamesLi' id="4" onClick={(e: any) => {
-                setGameInfo(gamesInfoArr[e.target.id - 2])
-                setClick(true)
-              }}>
-            <div id="4" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              ></div>
-          </li>
-          {/*MILION LASERS */}
-          <li className='gamesLi' id="5" onClick={(e: any) => {
-                setGameInfo(gamesInfoArr[e.target.id - 2])
-                setClick(true)
-              }}>
-            <div id="5" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              ></div>
-          </li>
-          {/* IT'S GONNA BE OK. */}
-          <li className='gamesLi' id="6" onClick={(e: any) => {
-                setGameInfo(gamesInfoArr[e.target.id - 2])
-                setClick(true)
-              }}>
-            <div id="6" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)} className='gameInfo'
-              ></div>
-          </li>
+
         </ul>
       </div>
     </div>
