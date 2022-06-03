@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BookWindow from './BookWindow/BookWindow';
 import './Games.scss'
 import PopUp from './PopUp/PopUp';
 
@@ -58,6 +59,7 @@ const Games = () => {
         setClick(false)
       }}) : React.createElement('img', {style:{position: 'absolute'}})}
       {/*isClicked ? <img src='https://i.postimg.cc/GtwZMPGf/SHORT.gif' className='bookGif' alt="" onClick={() => setClick(false)} /> : null*/}
+      {isClicked ? <BookWindow /> : null}
       <div className='Games'>
         <img className='gamesHeader' src="https://i.postimg.cc/zf7HKV0r/games-Header.png"/>
         {/*isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null*/}

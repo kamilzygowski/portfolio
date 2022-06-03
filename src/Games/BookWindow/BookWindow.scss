@@ -1,0 +1,27 @@
+.BookWindow{
+
+    position: absolute;
+    z-index: 700;
+    width:45%;
+    height: 60%;
+    background: rgba(0,0,0,0.3);
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    .page1{
+        background: gainsboro;
+        height:inherit;
+        width:inherit;
+    }
+    .page2{
+        height:inherit;
+        width: inherit;
+        background: tomato;
+    }
+}
