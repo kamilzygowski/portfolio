@@ -1,130 +1,196 @@
-.Contact{
+.Contact {
     background: #0a0f1e;
-    height:100vh;
+    height: 100vh;
+    .contactHeader {
+        margin: 0;
+        padding-top: 150px;
+        color: #fff;
+        font-size: 64px;
 
-    .contactHeader{
-        margin:0;
-        padding-top:150px;
-        color:#fff;
-        font-size:64px;
-
-        @media (max-width:2300px) and (min-width:2000px) {
-            width:1100px;
+        @media (max-width: 2300px) and (min-width: 2000px) {
+            width: 1100px;
         }
-        @media (max-width:2000px) and (min-width:1700px) {
-            width:1000px;
+        @media (max-width: 2000px) and (min-width: 1700px) {
+            width: 1000px;
         }
-        @media (max-width:1700px) and (min-width:1285px) {
-            width:935px;
+        @media (max-width: 1700px) and (min-width: 1285px) {
+            width: 755px;
+            padding-top: 50px;
         }
-        @media (max-width:1285px) and (min-width:800px) {
-            width:700px;
+        @media (max-width: 1285px) and (min-width: 800px) {
+            width: 700px;
+            padding-top: 25px;
         }
     }
-
-    .header{
-        margin-top:50px;
+    .header {
+        margin-top: 50px;
     }
-
-    .mailerForm{
-        margin-top:105px;
+    .mailerForm {
+        margin-top: 105px;
         display: flex;
         flex-direction: column;
-
-        .mailerName{
-            width:500px;
-            margin:auto;
-            margin-block:20px;
-            height:65px;
-            background: rgba(0,0,0,0.1);
-            border:3px solid #fff;
-            border-radius:22px;
-            font-size:32px;
-            color:#fff;
-            text-align: center;
-            font-family: "Katibeh", cursive;
-
-            &::placeholder{
-                font-size:32px;
-                text-align: center;
-                font-family: "Katibeh", cursive;
-            }
+        @media (max-width: 1700px) and (min-width: 1285px) {
+            margin-top: 35px;
         }
-        .mailerSubject{
+        @media (max-width: 1285px) and (min-width: 800px) {
+            margin-top: 35px;
+        }
+        .mailerName {
             width: 500px;
-            margin:auto;
-            margin-block:20px;
-            height:65px;
-            background: rgba(0,0,0,0.1);
-            border:3px solid #fff;
-            border-radius:22px;
-            color:#fff;
-            font-size:32px;
+            margin: auto;
+            margin-block: 20px;
+            height: 65px;
+            background: rgba(0, 0, 0, 0.1);
+            border: 3px solid #fff;
+            border-radius: 22px;
+            font-size: 32px;
+            color: #fff;
             text-align: center;
             font-family: "Katibeh", cursive;
-
-            &::placeholder{
-                font-size:32px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                margin-block: 10px;
+                width: 400px;
+                height: 50px;
+                font-size: 30px;
+            }
+            @media (max-width: 1285px) and (min-width: 800px) {
+                margin-block: 10px;
+                width: 350px;
+                width: 400px;
+                height: 40px;
+                font-size: 26px;
+            }
+            &::placeholder {
+                font-size: 32px;
                 text-align: center;
                 font-family: "Katibeh", cursive;
+                @media (max-width: 1700px) and (min-width: 1285px) {
+                    font-size: 30px;
+                }
+                @media (max-width: 1285px) and (min-width: 800px) {
+                    font-size: 26px;
+                }
             }
         }
-        .mailerMessage{
-            width:650px;
-            margin:auto;
-            margin-block:20px;
-            height:195px;
-            background: rgba(0,0,0,0.1);
-            border:3px solid #fff;
-            border-radius:22px;
-            color:#fff;
-            font-size:32px;
+        .mailerSubject {
+            width: 500px;
+            margin: auto;
+            margin-block: 20px;
+            height: 65px;
+            background: rgba(0, 0, 0, 0.1);
+            border: 3px solid #fff;
+            border-radius: 22px;
+            color: #fff;
+            font-size: 32px;
             text-align: center;
             font-family: "Katibeh", cursive;
-
-            &::placeholder{
-                font-size:32px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                margin-block: 10px;
+                width: 400px;
+                height: 50px;
+                font-size: 30px;
+            }
+            @media (max-width: 1285px) and (min-width: 800px) {
+                margin-block: 10px;
+                width: 350px;
+                width: 400px;
+                height: 40px;
+                font-size: 26px;
+            }
+            &::placeholder {
+                font-size: 32px;
                 text-align: center;
                 font-family: "Katibeh", cursive;
-                padding-top:50px;
+                @media (max-width: 1700px) and (min-width: 1285px) {
+                    font-size: 30px;
+                }
+                @media (max-width: 1285px) and (min-width: 800px) {
+                    font-size: 26px;
+                }
             }
         }
-        .mailerSubmit{
-            width:350px;
-            margin:auto;
-            margin-block:55px;
-            height:95px;
-            border:none;
+        .mailerMessage {
+            width: 650px;
+            margin: auto;
+            margin-block: 20px;
+            height: 195px;
+            background: rgba(0, 0, 0, 0.1);
+            border: 3px solid #fff;
+            border-radius: 22px;
+            color: #fff;
+            font-size: 32px;
+            text-align: center;
+            font-family: "Katibeh", cursive;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                margin-block: 20px;
+                width: 550px;
+                height: 135px;
+                font-size: 26px;
+            }
+            @media (max-width: 1285px) and (min-width: 800px) {
+                margin-block: 20px;
+                width: 500px;
+                height: 115px;
+                font-size: 26px;
+            }
+
+            &::placeholder {
+                font-size: 32px;
+                text-align: center;
+                font-family: "Katibeh", cursive;
+                padding-top: 50px;
+                @media (max-width: 1700px) and (min-width: 1285px) {
+                    font-size: 30px;
+                }
+                @media (max-width: 1285px) and (min-width: 800px) {
+                    font-size: 26px;
+                }
+            }
+        }
+        .mailerSubmit {
+            width: 350px;
+            margin: auto;
+            margin-block: 55px;
+            height: 95px;
+            border: none;
             border-radius: 15px;
-            font-size:42px;
+            font-size: 42px;
             background-color: #ff9ff3;
             font-family: "Katibeh", cursive;
             font-weight: bold;
-            &:hover{
-                
-                animation: .4s submit infinite ease-in-out;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                margin-block: 35px;
+                font-size: 36px;
+                height: 65px;
+            }
+            @media (max-width: 1285px) and (min-width: 800px) {
+                margin-block: 35px;
+                font-size: 32px;
+                height: 75px;
+            }
+            &:hover {
+                animation: 0.4s submit infinite ease-in-out;
                 transition: 7s;
             }
         }
     }
-
-    .focused{
-        box-shadow:
-        0 0 30px 10px #fff,
-        0 0 50px 20px #f0f,
-        0 0 70px 30px #0ff;
+    .focused {
+        box-shadow: 0 0 30px 10px #fff, 0 0 50px 20px #f0f, 0 0 70px 30px #0ff;
     }
 }
-
 @keyframes submit {
-    0%{
-        background: linear-gradient(355deg, rgba(255,255,255,1) 0%, rgba(255,0,255,1) 37%, rgba(0,255,255,1) 100%);
+    0% {
+        background: linear-gradient(
+            355deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 0, 255, 1) 37%,
+            rgba(0, 255, 255, 1) 100%
+        );
     }
-    50%{
+    50% {
         background: linear-gradient(355deg, rgb(241, 171, 171) 0%, rgb(101, 189, 43) 37%, rgb(46, 4, 102) 100%);
     }
-    100%{
+    100% {
         background: linear-gradient(355deg, rgb(252, 248, 31) 0%, rgb(81, 243, 216) 37%, rgb(48, 243, 145) 100%);
     }
-
 }

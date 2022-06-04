@@ -19,7 +19,20 @@
             border-radius: 15px;
             margin-block: 15px;
             box-shadow: rgba(0, 0, 0, 0.70) 0px 19px 38px, rgba(0, 0, 0, 0.85) 0px 15px 12px;
-
+            @media (max-width: 2250px) and (min-width: 1900px) {
+                
+            }
+            @media (max-width: 1900px) and (min-width: 1500px) {
+    
+            }
+            @media (max-width: 1500px) and (min-width: 1100px) {
+                
+            }
+            @media (max-width: 1100px) and (min-width: 800px) {
+                font-size: 22px;
+                padding: 22px;
+                margin-block: 10px;
+            }
             &:hover {
                 background: rgba(255, 255, 255, 0.35);
                 color: #000;
@@ -31,7 +44,18 @@
         margin-top: 150px;
         display: flex;
         flex-direction: column;
+        @media (max-width: 2250px) and (min-width: 1900px) {
+                
+        }
+        @media (max-width: 1900px) and (min-width: 1500px) {
 
+        }
+        @media (max-width: 1500px) and (min-width: 1100px) {
+            
+        }
+        @media (max-width: 1100px) and (min-width: 800px) {
+            margin-top: 45px;
+        }
         .social {
             padding: 10px;
             margin: 12px;
@@ -47,6 +71,18 @@
         color: rgba(255, 255, 255, 0.4);
         padding-left: 25px;
         text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        @media (max-width: 2250px) and (min-width: 1900px) {
+                
+        }
+        @media (max-width: 1900px) and (min-width: 1500px) {
+
+        }
+        @media (max-width: 1500px) and (min-width: 1100px) {
+            
+        }
+        @media (max-width: 1100px) and (min-width: 800px) {
+            font-size: 32px;
+        }
         &:hover {
             color: #000;
             transition: 0.15s;
