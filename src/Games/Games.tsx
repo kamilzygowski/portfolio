@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import BookWindow from './BookWindow/BookWindow';
 import './Games.scss'
 import PopUp from './PopUp/PopUp';
+import BookWindow from './BookWindow/BookWindow'
 
 interface ListStyle {
   z: number;
@@ -9,11 +9,17 @@ interface ListStyle {
   width: number;
   bottom: number;
 }
-
+export interface GamesInfo{
+  title: string;
+  description: string;
+  techstack: string[];
+  img: string;
+  href: string;
+}
 const Games = () => {
   const bookGif:any = React.createElement('img', {src:"https://i.postimg.cc/Jztj2NpP/op.gif", className:'bookGif'})
-  const gamesInfoArr = [{
-    title: 'Dimension Eye', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  const gamesInfoArr: GamesInfo[] = [{
+    title: 'Dimension Eye', description: 'Lorem ipsum dolor sit amet, cation ullamco laboris nisi uvoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     techstack:['Unity'], img: 'https://i.postimg.cc/vHrrQTby/deprev.png', href: 'https://swedishsailor.github.io/dimensioneye/'
   },
   { title: 'Mouse Sabre', description: 'XDDDDD', techstack:['TypeScript', 'NodeJS', 'MySQL'], img: 'https://i.postimg.cc/13BhsVGk/mousesabre.png', href: 'https://swedishsailor.github.io/mousesabre/' },
@@ -30,6 +36,7 @@ const Games = () => {
   // Controll the state of being hovered (or not)
   const [isHovered, setHover] = useState(false);
   const [isClicked, setClick] = useState(false);
+  const [chosenGameId, setChosenGameId] = useState<number>(0)
   const [gameInfo, setGameInfo] = useState({
     title: 'Dimension Eye', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     img: 'https://i.postimg.cc/vHrrQTby/deprev.png', href: 'https://swedishsailor.github.io/dimensioneye/'
@@ -55,11 +62,11 @@ const Games = () => {
   return (
     <div className='background'>
       {isClicked ? <div className='gamesMirror' onClick={() => setClick(false)}/> : null}
+      {isClicked ? <BookWindow gamesInfo={gamesInfoArr[chosenGameId]}/> : null}
       {isClicked ?  React.createElement('img', {className:'bookGif', src:'https://i.postimg.cc/GtwZMPGf/SHORT.gif', onClick:(e:any) => {
         setClick(false)
       }}) : React.createElement('img', {style:{position: 'absolute'}})}
       {/*isClicked ? <img src='https://i.postimg.cc/GtwZMPGf/SHORT.gif' className='bookGif' alt="" onClick={() => setClick(false)} /> : null*/}
-      {isClicked ? <BookWindow /> : null}
       <div className='Games'>
         <img className='gamesHeader' src="https://i.postimg.cc/zf7HKV0r/games-Header.png"/>
         {/*isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null*/}
@@ -68,6 +75,7 @@ const Games = () => {
           {gamesInfoArr.map((element:any, index:number) => {
             return(
             <li className='gamesLi' id={(index+2).toString()} onClick={(e: any) => {
+              setChosenGameId(index)
               setGameInfo(gamesInfoArr[index])
               setClick(true)
               handleMouseClick(e)

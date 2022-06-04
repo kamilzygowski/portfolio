@@ -2,26 +2,118 @@
 
     position: absolute;
     z-index: 700;
-    width:45%;
-    height: 60%;
-    background: rgba(0,0,0,0.3);
+    width:48%;
+    height: 50%;
+    //background: rgba(0,0,0,0.3);
     top:0;
     bottom:0;
     left:0;
     right:0;
     margin: auto;
+
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: center;
     .page1{
-        background: gainsboro;
-        height:inherit;
+        //background: gainsboro;
+        height:85%;
         width:inherit;
+        margin-right: 25px;
     }
     .page2{
-        height:inherit;
+        height:85%;
         width: inherit;
-        background: tomato;
+        //background: tomato;
+        margin-left: 25px;
+        margin-right: 110px;
+        
+    }
+
+    .gameImage{
+        width:90%;
+        object-fit: contain;
+        outline-offset: -15px;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 340px;
+        height: 80px;
+        background-color: white;
+        right: -5px;
+        top: 40px;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 300px;
+        height: 70px;
+        background-color: #e0efe3;
+        left: 0;
+        top: 27px;
     }
 }
+    .gameDescription{
+        padding:25px;
+        font-size:26px;
+    }
+    .gameHref{
+        font-size:30px;
+        text-decoration: none;
+    }
+    .techStackUl{
+        list-style: none;
+        margin-bottom: 40px;
+        .techStackTitle{
+            font-size: 36px;
+        }
+        .techStackLi{
+            color: seagreen;
+            font-size: 32px;
+            margin-block: 10px;
+        }
+    }
+
+    /* Text ANimations */
+    h1 {
+        font-family: 'Mali', cursive;
+        max-width: 40ch;
+        font-size: 36px;
+        text-align: center;
+        transform: scale(0.94);
+        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+      }
+      @keyframes scale {
+        100% {
+          transform: scale(1);
+        }
+      } 
+      .gameDescription, .techStackUl, .gameImage, .gameTitle, .gameHref {
+        opacity: 0;
+        filter: blur(4px);
+        font-family: 'Mali', cursive;
+      }
+      .gameTitle{
+        animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+      .gameDescription, .gameHref {
+        animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      } 
+      .techStackUl {
+        animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+      .gameImage {
+        animation: fade-in 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+      @keyframes fade-in {
+        100% {
+          opacity: 1;
+          filter: blur(0);
+        }
+      }
+}
+
