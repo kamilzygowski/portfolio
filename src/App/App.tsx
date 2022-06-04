@@ -15,8 +15,6 @@ import { faBabyCarriage, faBarChart, faBarcode, faBars, faBarsProgress, faBarsSt
 import { faChartBar } from '@fortawesome/free-regular-svg-icons';
 
 const App = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [changedIcon, setIconChange] = useState(false);
   const prevRef = useRef(null)
   const nextRef = useRef(null)
   setTimeout(() => {
@@ -25,8 +23,6 @@ const App = () => {
   }, 5000)
   return (
     <div className='App'>
-      <FontAwesomeIcon icon={changedIcon ? faStar : faBarsStaggered} className="bars" onClick={() => setMobileMenu(true)} onMouseEnter={() => setIconChange(true)} onMouseLeave={() => setIconChange(false)}/>
-      {mobileMenu ? <MobileMenu setMobileMenu={setMobileMenu}/> : null}
       <Sidebar/>
       <Swiper
         direction={"horizontal"}

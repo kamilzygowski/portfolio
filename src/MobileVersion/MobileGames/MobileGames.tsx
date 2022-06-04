@@ -2,7 +2,7 @@ import React from 'react'
 import './MobileGames.scss'
 const MobileGames = () => {
   return (
-    <div>MobileGames</div>
+    <div className='MobileGames'>MobileGames</div>
   )
 }
 

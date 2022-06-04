@@ -3,7 +3,7 @@ import './MobileContact.scss'
 
 const MobileContact = () => {
   return (
-    <div>MobileContact</div>
+    <div className='MobileContact'>MobileContact</div>
   )
 }
 

@@ -3,7 +3,7 @@ import './MobileHero.scss'
 
 const MobileHero = () => {
   return (
-    <div>MobileHero</div>
+    <div className='MobileHero'>MobileHero</div>
   )
 }
 
