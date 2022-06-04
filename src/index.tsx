@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
+import MobileVersion from './MobileVersion/MobileVersion';
 
 ReactDOM.render(
   //<React.StrictMode>
-    <App />
+  <div>
+  {window.innerWidth > 800 ? <App /> : <MobileVersion/>}
+  </div>
+
   //</React.StrictMode>,
   ,
   document.getElementById('root')
