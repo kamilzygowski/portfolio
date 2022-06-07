@@ -74,7 +74,7 @@ const Games = () => {
           {/* TITLE LINK*/}
           {gamesInfoArr.map((element:any, index:number) => {
             return(
-            <li className='gamesLi' id={(index+2).toString()} onClick={(e: any) => {
+            <li className='gamesLi' key={index} id={(index+2).toString()} onClick={(e: any) => {
               setChosenGameId(index)
               setGameInfo(gamesInfoArr[index])
               setClick(true)
