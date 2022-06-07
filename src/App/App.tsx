@@ -9,7 +9,6 @@ import Games from '../Games/Games';
 import Sidebar from '../Sidebar/Sidebar';
 import Contact from '../Contact/Contact';
 import GamesSection from '../GamesSection/GamesSection';
-import MobileMenu from '../MobileMenu/MobileMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBabyCarriage, faBarChart, faBarcode, faBars, faBarsProgress, faBarsStaggered, faBraille, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faChartBar } from '@fortawesome/free-regular-svg-icons';

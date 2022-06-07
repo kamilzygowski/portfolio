@@ -1,5 +1,20 @@
-.MobileHero{
+.MobileHero {
     width: 100vw;
     min-height: 200px;
-    background: gold;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    .mobileHello {
+        width: 95%;
+        margin-top: 25px;
+    }
+    .mobileImKamil {
+        width: 95%;
+        margin-top: -75px;
+    }
+    .mobileLivingInGdansk {
+        width: 95%;
+        margin-top: -50px;
+    }
 }

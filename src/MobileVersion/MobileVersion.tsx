@@ -8,6 +8,7 @@ import MobileMenu from './MobileMenu/MobileMenu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBabyCarriage, faBarChart, faBarcode, faBars, faBarsProgress, faBarsStaggered, faBraille, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faChartBar } from '@fortawesome/free-regular-svg-icons';
+import MobileFooter from './MobileFooter/MobileFooter'
 
 const MobileVersion = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -20,6 +21,7 @@ const MobileVersion = () => {
         <MobileProjects />
         <MobileGames />
         <MobileContact />
+        <MobileFooter />
     </div>
   )
 }

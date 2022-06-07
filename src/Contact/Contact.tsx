@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <div className="Contact" onClick={(e) => handleFocus(e)}>
       <img src="https://i.postimg.cc/02tWmxGq/contact.png" alt="header" className='contactHeader'/>
-      <form className='mailerForm' onSubmit={(e)=> {e.preventDefault();post_data(e)}}>
+      <form className='mailerForm' autoComplete='off' onSubmit={(e)=> {e.preventDefault();post_data(e)}}>
         <input className='mailerName input' type="text" placeholder='Insert your name' name="name" onFocus={(e:any) => handleFocus(e)}></input>
         <input className='mailerSubject input' type="text" placeholder='Insert subject' name="subject" onFocus={(e:any) => handleFocus(e)}></input>
         <textarea className='mailerMessage input' placeholder='Write a message' name="message" onFocus={(e:any) => handleFocus(e)}></textarea>

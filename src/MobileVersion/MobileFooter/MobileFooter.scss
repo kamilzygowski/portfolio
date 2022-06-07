@@ -1,0 +1,14 @@
+.MobileFooter {
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+    text-align: center;
+    .date {
+        margin-inline: 15px;
+        font-size:30px;
+    }
+    .name {
+        margin-inline: 15px;
+        font-size:30px;
+    }
+}
