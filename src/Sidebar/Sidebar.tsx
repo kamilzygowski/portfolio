@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChessRook, faChevronRight, faCode, faEnvelope, faEye, faGamepad, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { SocialIcon } from 'react-social-icons';
 
-const Sidebar = () => {
+const Sidebar = (props:any) => {
   const [container, setContainer] = useState<any>(null);
   const [canUserHover, setHover] = useState<boolean>(true);
   const toggleSidebar = ():void => {
@@ -14,12 +14,10 @@ const Sidebar = () => {
     }
     setTimeout(() => {
       setHover(true);
-      console.log('set to true')
     }, 1200);
   }
-
-  
   const scrollToComponent = (id:number) => {
+    props.swipeTo(id)
     const swiperWrapper:any = document.querySelector(".swiper-wrapper");
     const swiperSlides:any = document.querySelectorAll('.swiper-slide')
     console.log(swiperWrapper.style.transform)
@@ -33,7 +31,7 @@ const Sidebar = () => {
     })
     // Attach Swiper classes to correct components
     swiperSlides[id].classList.add('swiper-slide-active')
-    if(id+1 >= swiperSlides.length){
+    if(id+1 >= swiperSlides.length-1){
       swiperSlides[0].classList.add('swiper-slide-next')
     }else{
       swiperSlides[id+1].classList.add('swiper-slide-next')
@@ -43,6 +41,7 @@ const Sidebar = () => {
     }else{
       swiperSlides[id-1].classList.add('swiper-slide-prev')
     }  
+
   }
   return (
     <div className='Sidebar' ref={(element) => setContainer(element)}>

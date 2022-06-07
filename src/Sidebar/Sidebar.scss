@@ -26,7 +26,9 @@
     
             }
             @media (max-width: 1500px) and (min-width: 1100px) {
-                
+                font-size: 21px;
+                padding: 22px;
+                margin-block: 10px;
             }
             @media (max-width: 1100px) and (min-width: 800px) {
                 font-size: 22px;
@@ -51,7 +53,7 @@
 
         }
         @media (max-width: 1500px) and (min-width: 1100px) {
-            
+            margin-top: 45px;
         }
         @media (max-width: 1100px) and (min-width: 800px) {
             margin-top: 45px;
@@ -72,10 +74,10 @@
         padding-left: 25px;
         text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
         @media (max-width: 2250px) and (min-width: 1900px) {
-                
+            
         }
         @media (max-width: 1900px) and (min-width: 1500px) {
-
+            
         }
         @media (max-width: 1500px) and (min-width: 1100px) {
             

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel } from 'swiper';
 import Home from '../Home/Home'
@@ -20,23 +20,44 @@ const App = () => {
     console.log(nextRef)
 
   }, 5000)
+  // Get the ref to swiper
+  let swiperRef:any;
+  
+  useEffect(()=> {
+    //swiperRef.activeIndex = 3;
+  }, [])
+  const swipeTo = (id:number) => {
+   swiperRef.previousIndex = id <= 0 ? null : id-1;
+    swiperRef.activeIndex = id;
+   swiperRef.nextIndex = id >= 3 ? null : id+1
+
+
+  }
   return (
     <div className='App'>
-      <Sidebar/>
+      <Sidebar swipeTo={swipeTo}/>
       <Swiper
         direction={"horizontal"}
         slidesPerView={1}
         //spaceBetween={30}
         mousewheel={true}
     // Tring to get the refferences
-
         modules={[Mousewheel, Pagination]}
         observeParents={true}
         observer={true}
         className="mySwiper"
         allowTouchMove={false}
+        onSlideChange={(swiper) => console.log(swiper)}
+        onSwiper={(swiper) => swiperRef=swiper}
+        onInit={(swiper) => {
+          swiperRef=swiper
+          console.log(swiper)
+        }}
+        onActiveIndexChange={() => console.log('changed active index')}
       >
+        
           <SwiperSlide>
+     
           <Home />
           </SwiperSlide>
         <SwiperSlide>
