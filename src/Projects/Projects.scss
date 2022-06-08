@@ -1,71 +1,65 @@
 .Projects {
     height: 100vh;
     width: 100vw;
-    //background:#5352ed;
-    //background: #2bbeb2;
     background: url("https://i.postimg.cc/Hs6NdG6j/wbnn4jk6p9j31.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
-    .test{
-        width:550px;
-        height:400px;
-        background:red;
+    .test {
+        width: 550px;
+        height: 400px;
+        background: red;
     }
-
     h3 {
         margin: 0;
         padding-block: 50px;
     }
-
-    .replay{
-        font-size:86px;
+    .replay {
+        font-size: 86px;
         position: absolute;
-        color: 	#000;
+        color: #000;
         opacity: 0.5;
         animation: rotate 11s infinite ease-in-out;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             animation: rotate 0.5s infinite ease-in-out;
         }
     }
-
-    .minimizedWindows{
+    .minimizedWindows {
         position: fixed;
         display: flex;
-        left:125px;
-        bottom:25px;
+        left: 0px;
+        bottom: 0px;
         list-style: none;
         align-content: flex-end;
-        .minimizedWindow{
-            width:95px;
-            height:95px;
-            background: rgba(255, 255, 255, 0.425);
-            border-radius: 15px;
-            box-shadow: rgb(255, 255, 255) 0px 0px 15px 0px inset;
-            margin-inline: 10px;
-            &:hover{
-                background: rgba(255, 255, 255, 1); 
+        padding: 0;
+        margin: 0;
+        .minimizedWindow {
+            width: 65px;
+            height: 65px;
+            //background: rgba(255, 255, 255, 0.125);
+            border-radius: 10px;
+            //box-shadow: rgb(255, 255, 255) 0px 0px 15px 0px inset;
+            margin-inline: 5px;
+            &:nth-of-type(2) {
+                margin-left: 50px;
+            }
+            &:hover {
+                background: rgba(255, 255, 255, 0.151);
                 transition: 1.15s;
             }
-           
-            img{
-                width:50px;
-                height: 50px;
-                top:0;
+
+            img {
+                width: 45px;
+                height: 45px;
+                top: 0;
                 bottom: 0;
-                margin-top:21px;
+                margin-top: 10px;
                 z-index: 55px;
-         
- 
-                
             }
         }
     }
-
     .interactivePortfolio {
-
         img {
             width: 450px;
             border-radius: 15px;
@@ -74,7 +68,6 @@
             object-position: bottom;
         }
     }
-
     .projectsList {
         padding: 100px;
         width: 90%;
@@ -82,15 +75,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         .window {
             width: 1050px;
             height: 850px;
             margin: 25px;
-
-
-
-
+            position: absolute;
             .topBar {
                 margin-left: -2px;
                 margin-top: -1px;
@@ -111,25 +100,22 @@
                 border-bottom: 2px solid #000;
                 display: flex;
                 flex-direction: row-reverse;
-
-                .title{
-                    
+                .title {
                     text-align: left;
                     padding-left: 3%;
                     position: fixed;
-                    left:17px;
-                    top:-12px;
+                    left: 17px;
+                    top: -12px;
                     height: 45px;
                     p {
-                        color:#fff;
+                        color: #fff;
                         font-family: Tahoma, sans-serif;
                         font-weight: 600;
                         font-size: 24px;
-                        cursor:default;
+                        cursor: default;
                         letter-spacing: 2px;
                     }
                 }
-
                 .Btn {
                     margin-top: 2px;
                     width: 38px;
@@ -137,7 +123,6 @@
                     background-color: rebeccapurple;
                     margin-inline: 3px;
                     border-radius: 7px;
-
                     &:nth-of-type(1) {
                         margin-right: 20px;
                     }
@@ -163,7 +148,6 @@
                     border: 1px solid #fff;
                 }
             }
-
             .frame {
                 height: inherit;
                 width: inherit;
@@ -203,14 +187,20 @@
         margin-top: 5vh;
         border-radius: 10px;
     }
+    .tasksBar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 65px;
+        //background-color: rgba(85, 117, 156, 0.3);
+        background-color: rgba(9, 12, 17, 0.53);
+    }
 }
-
-.hidden{
+.hidden {
     display: none;
 }
-
 @keyframes rotate {
-    100%{
+    100% {
         transform: rotate(340deg);
     }
 }

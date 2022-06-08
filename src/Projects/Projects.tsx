@@ -11,9 +11,9 @@ interface Project {
 
 const Projects = () => {
     const initialProjects = [
-        { src: "https://i.postimg.cc/MpCrVwHw/planetraium.png", id: 0, title:'Planetarium' },
-        { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title:'Franky Cars Warehouse' },
-        { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title:'Just a photo' }
+        { src: "https://i.postimg.cc/MpCrVwHw/planetraium.png", id: 0, title: 'Planetarium' },
+        { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars Warehouse' },
+        { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Just a photo' }
     ]
     const windowElement: any = useRef(null);
     const minimizedWindowsElement: any = useRef(null)
@@ -30,7 +30,6 @@ const Projects = () => {
     }
     const handleUnMinimize = (id: any, key: any) => {
         const newItem: any = initialProjects[id];
-        //const newItem: any = minimizedWindow[id];
         // First delete the minimized icon 
         const placeholderArray = [...minimizedWindow]
         placeholderArray.splice(key, 1)
@@ -42,7 +41,6 @@ const Projects = () => {
             ...projects,
             newItem
         ])
-
     }
     const handleMinimize = (e: any) => {
         handleClose(e);
@@ -50,20 +48,12 @@ const Projects = () => {
             ...minimizedWindow,
             projects[e.target.id]
         ])
-        // windowElement.current.style = "position: fixed; bottom:0; transform:scale(0.35); transition:0.7s; display:none"
-        //const mirror = windowElement.cloneNode(false);
-        //console.log(mirror)
-        //mirror.style += 'background:url("https://i.postimg.cc/rp57qS8t/981-9817075-vector-free-what-is-microsoft-explorer-internet-explorer.png")'
-        //console.log(windowElement.current)
-        //minWindow.innerHTML = '<img src="https://i.postimg.cc/rp57qS8t/981-9817075-vector-free-what-is-microsoft-explorer-internet-explorer.png"/>'
-        //minimizedWindowsElement.appendChild(minWindow)
-
     }
     const handleMaximize = () => {
         // On maximize we will create the window on almost whole screen displaying project info
     }
-    
-     const changeIndexZToMax = (e: any) => {
+
+    const changeIndexZToMax = (e: any) => {
         const allWindows: any = document.querySelectorAll('.window')
 
         // At first change all windows Z Index to 50
@@ -71,17 +61,13 @@ const Projects = () => {
             window.style.zIndex = 50;
         }
         // Then make THIS window Z Index 250
-        if(allWindows[e.target.id] !== undefined)
-        allWindows[e.target.id].style.zIndex = 250;
+        if (allWindows[e.target.id] !== undefined)
+            allWindows[e.target.id].style.zIndex = 250;
     }
     return (
         <div className='Projects'>
             {/*<iframe src="https://swedishsailor.github.io/portfolio-game/" className='iproject' title='portfolio game' />*/}
-            <h3><FontAwesomeIcon icon={faArrowRotateRight} className="replay"/>{/*Projects*/}</h3>
-            {/*<div className='interactivePortfolio'>
-                <img src="https://i.postimg.cc/7Z3Lrxpt/sassss.png" alt="Interactive Portfolio" />
-                <p>Checkout my interactive portfolio</p>
-    </div>*/}
+            <h3><FontAwesomeIcon icon={faArrowRotateRight} className="replay" />{/*Projects*/}</h3>
             <div className='projectsList' ref={windowElement}>
                 {projects.map((element: any, index: number) => {
                     return (
@@ -110,20 +96,24 @@ const Projects = () => {
                     )
                 })}
             </div>
+            <div className='tasksBar'>
             <ul className='minimizedWindows' ref={minimizedWindowsElement}>
+                <li className='minimizedWindow'>
+                    <img src="https://i.postimg.cc/ZRVHrnqY/win8white.webp" alt="win"/>
+                </li>
                 {minimizedWindow.map((element: any, index: number) => {
                     return (
                         <li className='minimizedWindow' id={element.id} onClick={() => handleUnMinimize(element.id, index)} key={index}>
-                            <img src="https://i.postimg.cc/rp57qS8t/981-9817075-vector-free-what-is-microsoft-explorer-internet-explorer.png" />
-                            <p>{element.id}</p>
+                            <img src="https://i.postimg.cc/rp57qS8t/981-9817075-vector-free-what-is-microsoft-explorer-internet-explorer.png" alt="tasks" />
                         </li>
                     )
                 })}
-
+                <li className='minimizedWindow'>
+                    <img src="https://i.postimg.cc/RFqbFwMQ/terminal-icon-png-0.webp" alt="terminal"/>
+                </li>
             </ul>
-
+            </div>
         </div>
     )
 }
-
 export default Projects
