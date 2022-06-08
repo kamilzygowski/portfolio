@@ -1,14 +1,10 @@
 .Projects {
     height: 100vh;
     width: 100vw;
-    background: url("https://i.postimg.cc/Hs6NdG6j/wbnn4jk6p9j31.jpg");
+    //background: url("https://i.postimg.cc/Hs6NdG6j/wbnn4jk6p9j31.jpg");
+    background: url("https://i.postimg.cc/nzyJ8Bgr/1511370.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    .test {
-        width: 550px;
-        height: 400px;
-        background: red;
-    }
     h3 {
         margin: 0;
         padding-block: 50px;
@@ -80,6 +76,7 @@
             height: 850px;
             margin: 25px;
             position: absolute;
+            transform: scale(0.6);
             .topBar {
                 margin-left: -2px;
                 margin-top: -1px;
