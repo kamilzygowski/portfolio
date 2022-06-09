@@ -6,13 +6,12 @@ import MobileHero from './MobileHero/MobileHero'
 import MobileProjects from './MobileProjects/MobileProjects'
 import MobileMenu from './MobileMenu/MobileMenu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBabyCarriage, faBarChart, faBarcode, faBars, faBarsProgress, faBarsStaggered, faBraille, faStar } from '@fortawesome/free-solid-svg-icons';
-import { faChartBar } from '@fortawesome/free-regular-svg-icons';
+import { faBarsStaggered, faStar } from '@fortawesome/free-solid-svg-icons';
 import MobileFooter from './MobileFooter/MobileFooter'
 
 const MobileVersion = () => {
-    const [mobileMenu, setMobileMenu] = useState(false);
-    const [changedIcon, setIconChange] = useState(false);
+    const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+    const [changedIcon, setIconChange] = useState<boolean>(false);
   return (
     <div className="MobileVersion">
         <FontAwesomeIcon icon={changedIcon ? faStar : faBarsStaggered} className="bars" onClick={() => setMobileMenu(true)} onMouseEnter={() => setIconChange(true)} onMouseLeave={() => setIconChange(false)}/>
@@ -25,5 +24,4 @@ const MobileVersion = () => {
     </div>
   )
 }
-
 export default MobileVersion
