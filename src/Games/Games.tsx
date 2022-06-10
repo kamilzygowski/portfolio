@@ -63,7 +63,7 @@ const Games = () => {
     <div className='background'>
       {isClicked ? <div className='gamesMirror' onClick={() => setClick(false)}/> : null}
       {isClicked ? <BookWindow gamesInfo={gamesInfoArr[chosenGameId]}/> : null}
-      {isClicked ?  React.createElement('img', {className:'bookGif', src:'https://i.postimg.cc/GtwZMPGf/SHORT.gif', onClick:(e:any) => {
+      {isClicked ?  React.createElement('img', {className:'bookGif', src:'https://i.postimg.cc/6Qv3DY8k/pbook.gif', onClick:(e:any) => {
         setClick(false)
       }}) : React.createElement('img', {style:{position: 'absolute'}})}
       {/*isClicked ? <img src='https://i.postimg.cc/GtwZMPGf/SHORT.gif' className='bookGif' alt="" onClick={() => setClick(false)} /> : null*/}

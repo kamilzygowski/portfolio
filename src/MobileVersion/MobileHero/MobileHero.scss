@@ -1,10 +1,27 @@
 .MobileHero {
     width: 100vw;
-    min-height: 200px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     align-content: center;
-
+    background: url("https://i.postimg.cc/RZRRMb5n/clean-Cut2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 70%;
+    z-index: 500;
+    .hello{
+        font-family: 'Acme', sans-serif;
+        margin-left:25px;
+        font-size: 46px;
+        margin-top:75px;
+    }
+    .imKamil{
+        font-family: 'Acme', sans-serif;
+        margin-top:5px;
+        font-size: 40px;
+        margin-left: 55px;
+    }
     .mobileHello {
         width: 95%;
         margin-top: 65px;
