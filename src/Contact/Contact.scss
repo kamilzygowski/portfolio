@@ -5,6 +5,9 @@
     flex-direction: column;
     justify-content: center;
     font-family: "Katibeh", cursive;
+    .localizationGif{
+        max-width:420px;
+    }
     .container{
         display: flex;
         flex-direction: row;
@@ -28,8 +31,8 @@
         }
         .infoIcon{
             font-size:36px;
-            margin-inline:15px;
             margin:15px;
+            margin-right:25px;
         }
         .sideInfo{
             font-size:21px;
@@ -182,13 +185,13 @@
             }
         }
         .mailerSubmit {
-            width: 250px;
+            width: 210px;
             margin: auto;
             margin-block: 55px;
             height: 95px;
             border: none;
             border-radius: 15px;
-            font-size: 28px;
+            font-size: 25px;
             background-color: #ff9ff3;
             font-weight: bold;
             @media (max-width: 1700px) and (min-width: 1285px) {

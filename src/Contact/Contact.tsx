@@ -61,7 +61,7 @@ const Contact = () => {
           <p className="sideInfo">Gdansk, Poland, 80-177</p>
           </div>
           <div className='infoWrapper'>
-          Tutaj gif gdanska z podksakujacym znacznikiem
+          <img alt="localization" className='localizationGif' src="https://i.postimg.cc/RVXDkGbR/newlocal.gif"/>
           </div>
         </div>
       </div>
