@@ -2,51 +2,55 @@
     width: 100%;
     min-height: 200px;
     text-align: center;
-    margin-block:20px;
-    .socialLinks{
-        margin-top:10px;
-        .social{
-            margin-inline:5%;
-            &:hover{
+    margin-block: 20px;
+    .socialLinks {
+        margin-top: 10px;
+        .social {
+            margin-inline: 5%;
+            &:hover {
                 transform: scale(1.3);
                 transition: 0.8s;
             }
         }
     }
-    .container{
-        margin:auto;
-        background-color: #CA82FF;
+    .container {
+        margin: auto;
+        background: hsla(275, 100%, 75%, 1);
+        background: linear-gradient(0deg, hsla(275, 100%, 75%, 1) 0%, hsla(226, 50%, 65%, 1) 100%);
+        background: -moz-linear-gradient(0deg, hsla(275, 100%, 75%, 1) 0%, hsla(226, 50%, 65%, 1) 100%);
+        background: -webkit-linear-gradient(0deg, hsla(275, 100%, 75%, 1) 0%, hsla(226, 50%, 65%, 1) 100%);
         border-radius: 15px;
-        width:100%;
-        padding-block:5px;
+        width: 100%;
+        padding-block: 5px;
         font-family: "Acme", sans-serif;
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-        .or{
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px,
+            rgba(17, 17, 26, 0.1) 0px 16px 48px;
+        .or {
             font-size: 19px;
         }
-        .info{
+        .info {
             margin: auto;
-            width:95%;
+            width: 95%;
             display: flex;
             flex-direction: row;
-            margin-block:25px;
-            .infoIcon{
-                padding-top:10px;
-                font-size:32px;
+            margin-block: 25px;
+            .infoIcon {
+                padding-top: 10px;
+                font-size: 32px;
             }
-            .block{
+            .block {
                 width: 45%;
-                background: #A760FF;
+                background: #a760ff;
                 border-radius: 7.5px;
                 margin: auto;
-                padding:6px;
-                color:#FFCC8F;
+                padding: 6px;
+                color: #ffcc8f;
                 animation: shine 16s infinite;
             }
         }
     }
-    .contactHeader{
-        font-family: 'Fredoka One', cursive;
+    .contactHeader {
+        font-family: "Fredoka One", cursive;
         font-size: 32px;
     }
     .mobileContactForm {
@@ -60,12 +64,12 @@
             margin: 10px auto;
             border-radius: 15px;
             font-size: 21px;
-            background-color: #FFCC8F;
+            background-color: #ffcc8f;
             font-family: "Acme", sans-serif;
             padding: 5px;
             &::placeholder {
                 font-family: "Acme", sans-serif;
-                color:rgb(178, 106, 245);
+                color: rgb(178, 106, 245);
                 font-size: 21px;
             }
         }
@@ -85,14 +89,14 @@
         }
     }
 }
-@keyframes shine{
-    0%{
-        background: #CA82FF;
+@keyframes shine {
+    0% {
+        background: #ca82ff;
     }
-    50%{
-        background: #A760FF;
+    50% {
+        background: #a760ff;
     }
-    100%{
-        background: #CA82FF;
+    100% {
+        background: #ca82ff;
     }
 }
