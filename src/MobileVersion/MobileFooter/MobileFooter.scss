@@ -1,14 +1,18 @@
 .MobileFooter {
     display: flex;
     flex-direction: row;
-    height: 75px;
+    height: 55px;
     text-align: center;
+    font-family: 'Amatic SC', cursive;
+    justify-content: center;
+    background: #A760FF;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
     .date {
-        margin-inline: 15px;
-        font-size:30px;
+        margin: auto 15px;
+        font-size:36px;
     }
     .name {
-        margin-inline: 15px;
-        font-size:30px;
+        margin:auto 15px;
+        font-size:36px;
     }
 }

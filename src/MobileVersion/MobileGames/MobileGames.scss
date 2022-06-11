@@ -1,7 +1,7 @@
 $gamesIntro: #CA82FF;
 .MobileGames {
     margin-top: 45px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     .slide {
@@ -26,7 +26,7 @@ $gamesIntro: #CA82FF;
                 }
                 .introGif{
                     width:70%;
-                    margin:35px auto;
+                    margin:15% auto;
                 }
                 .swipeRight{
                     border-radius: 35px;
