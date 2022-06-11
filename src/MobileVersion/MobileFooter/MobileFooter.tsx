@@ -6,7 +6,7 @@ const MobileFooter = () => {
   return (
     <footer className='MobileFooter'>
         <p className='date'>@{date.getFullYear()} </p>
-        <p className='name'> Kamil Żygowski</p>
+        <p className='name'> Kamil Żygowski - SwedishSailor</p>
     </footer>
   )
 }

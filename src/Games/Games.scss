@@ -1,9 +1,10 @@
 .background{
     //background: url("https://i.postimg.cc/4yYT0KzV/perspective-floor.png");
     background-position: bottom;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    //background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: url("https://i.postimg.cc/kXZZRQpn/7ztu.gif");
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: cover;
     background-position: center;
 
     .gamesMirror{
@@ -45,16 +46,16 @@
     }
     .gamesHeader{
         position: absolute;
-        left:115px;
-        top:65px;
+        left:45px;
+        top:5px;
         @media (max-width:2300px) and (min-width:2000px) {
-            width:900px;
-        }
-        @media (max-width:2000px) and (min-width:1700px) {
             width:800px;
         }
+        @media (max-width:2000px) and (min-width:1700px) {
+            width:700px;
+        }
         @media (max-width:1700px) and (min-width:1285px) {
-            width:735px;
+            width:635px;
         }
         @media (max-width:1285px) and (min-width:800px) {
             width:500px;
@@ -97,7 +98,7 @@
             width:200px;
         }
         @media (max-width:1285px) and (min-width:800px) {
-            width:160px;
+            width:200px;
         }
         /*&:nth-of-type(1){
             z-index: 45;

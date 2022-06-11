@@ -68,7 +68,7 @@ const Games = () => {
       }}) : React.createElement('img', {style:{position: 'absolute'}})}
       {/*isClicked ? <img src='https://i.postimg.cc/GtwZMPGf/SHORT.gif' className='bookGif' alt="" onClick={() => setClick(false)} /> : null*/}
       <div className='Games'>
-        <img className='gamesHeader' src="https://i.postimg.cc/nzw3dQvs/games-Header-POKELESS.png"/>
+        <img className='gamesHeader' src="https://i.postimg.cc/fWSgntbp/games-Header-POKELESS.webp"/>
         {/*isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null*/}
         <ul className='gamesUl'>
           {/* TITLE LINK*/}

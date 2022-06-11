@@ -7,13 +7,15 @@ import { faArrowRotateRight } from '@fortawesome/free-solid-svg-icons';
 interface Project {
     src: string;
     id: number;
+    title: string;
+    iframe: string;
 }
 
 const Projects = () => {
-    const initialProjects = [
-        { src: "https://i.postimg.cc/MpCrVwHw/planetraium.png", id: 0, title: 'Planetarium' },
-        { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars Warehouse' },
-        { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Just a photo' }
+    const initialProjects: Project[] = [
+        { src: "https://i.postimg.cc/MpCrVwHw/planetraium.png", id: 0, title: 'Planetarium', iframe: "https://swedishsailor.github.io/planetarium/"},
+        { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars Warehouse', iframe:"https://swedishsailor.github.io/frankyCars/"},
+        { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Old Portfolio', iframe:"https://swedishsailor.github.io/" }
     ]
     const windowElement: any = useRef(null);
     const minimizedWindowsElement: any = useRef(null)
@@ -90,7 +92,8 @@ const Projects = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <img src={element.src} alt="project" />
+                                {/*<img src={element.src} alt="project" />*/}
+                                <iframe title={element.title} src={element.iframe}/>
                             </div>
                         </Draggable>
                     )
