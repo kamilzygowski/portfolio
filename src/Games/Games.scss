@@ -46,16 +46,19 @@
     }
     .gamesHeader{
         position: absolute;
-        left:45px;
-        top:5px;
+        left:95px;
+        top:15px;
+        @media (max-width:3000px) and (min-width:2300px) {
+            width:650px;
+        }
         @media (max-width:2300px) and (min-width:2000px) {
-            width:800px;
+            width:600px;
         }
         @media (max-width:2000px) and (min-width:1700px) {
-            width:700px;
+            width:600px;
         }
         @media (max-width:1700px) and (min-width:1285px) {
-            width:635px;
+            width:555px;
         }
         @media (max-width:1285px) and (min-width:800px) {
             width:500px;

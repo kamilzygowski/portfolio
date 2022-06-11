@@ -6,7 +6,13 @@
     justify-content: center;
     font-family: "Katibeh", cursive;
     .localizationGif{
-        max-width:420px;
+        max-width:650px;
+        @media (max-width: 1700px) and (min-width: 1285px) {
+            max-width:420px;
+        }
+        @media (max-width: 1285px) and (min-width: 800px) {
+            max-width:420px;
+        }
     }
     .container{
         display: flex;
@@ -45,11 +51,9 @@
         font-size: 64px;
         display: flex;
         align-self: center;
-        @media (max-width: 2300px) and (min-width: 2000px) {
-            width: 1100px;
-        }
-        @media (max-width: 2000px) and (min-width: 1700px) {
-            width: 1000px;
+        @media (max-width: 3000px) and (min-width: 1700px) {
+            margin-top: 65px;
+            width: 950px;
         }
         @media (max-width: 1700px) and (min-width: 1285px) {
             width: 755px;
@@ -96,7 +100,7 @@
         }
         .mailerName {
             margin-inline: 10px;
-            width: 240px;
+            width: 350px;
             height: 65px;
             @media (max-width: 1700px) and (min-width: 1285px) {
                 margin-block: 10px;
@@ -125,7 +129,7 @@
             }
         }
         .mailerSubject {
-            width: 240px;
+            width: 350px;
             height: 65px;
             @media (max-width: 1700px) and (min-width: 1285px) {
                 margin-block: 10px;
@@ -154,7 +158,7 @@
             }
         }
         .mailerMessage {
-            width: 550px;
+            width: 720px;
             height: 195px;
             @media (max-width: 1700px) and (min-width: 1285px) {
                 margin-block: 20px;

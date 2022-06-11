@@ -1,7 +1,7 @@
 import React from 'react'
 import './Contact.scss'
 import axios from 'axios'
-import { faEnvelope, faEnvelopeOpenText, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faEnvelopeOpenText, faGlobe, faLocationDot, faMap } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
@@ -57,7 +57,7 @@ const Contact = () => {
           <p className="sideInfo">kzygowski7@gmail.com</p>
           </div>
           <div className='infoWrapper'>
-          <FontAwesomeIcon icon={faLocationDot} className="infoIcon"/> 
+          <FontAwesomeIcon icon={faGlobe} className="infoIcon"/> 
           <p className="sideInfo">Gdansk, Poland, 80-177</p>
           </div>
           <div className='infoWrapper'>
