@@ -13,9 +13,10 @@ interface Project {
 const Projects = () => {
   const initialProjects: Project[] = [
     { src: "https://i.postimg.cc/MpCrVwHw/planetraium.png", id: 0, title: 'Planetarium', iframe: "https://swedishsailor.github.io/planetarium/" },
-    { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars Warehouse', iframe: "https://swedishsailor.github.io/frankyCars/" },
+    { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/" },
     { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/" }
   ]
+  const hardCodedMaximize = {width: 640+'px', height:460+'px'}
   const [restartWindows, setRestartWindows] = useState(false)
   const [rememberedProjects, setRememberedProjects] = useState<any>([])
   const windowElement: any = useRef(null);
@@ -63,8 +64,14 @@ const Projects = () => {
     ])
     console.log(minimizedWindow)
   }
-  const handleMaximize = () => {
+  const handleMaximize = (e:any) => {
     // On maximize we will create the window on almost whole screen displaying project info
+    console.log(e.target)
+    console.log(e.target.id)
+    const windows:any = document.querySelectorAll('.window');
+    for (const window of windows){
+      console.log(window.id)
+    }
   }
 
   const changeIndexZToMax = (e: any) => {
@@ -83,7 +90,7 @@ const Projects = () => {
       <FontAwesomeIcon icon={faArrowRotateRight} className="replay" onClick={() => { setMinimizedWindows([]); setRestartWindows(true) }} />{/*Projects*/}
       <div className='projectsList' ref={windowElement}>
         {!restartWindows ?
-          projects.map((element: any, index: number) => {
+          projects.map((element: any, index: string) => {
             return (
               <Draggable
                 axis="both"
@@ -91,25 +98,30 @@ const Projects = () => {
                 key={index}
                 onDrag={(e) => changeIndexZToMax(e)}
               >
-                <div className='window' style={{ zIndex: 50 }} id={element.id} key={index} onClick={(e) => changeIndexZToMax(e)}>
-                  <div className='frame'>
-                    <div className='topBar' id={element.id} onDrag={(e) => changeIndexZToMax(e)} >
-                      <div className='Btn closeBtn' id={element.id} onClick={(e) => handleClose(e)}>
-                        <FontAwesomeIcon icon={faXmark} className="icon" />
+                <div className='window' style={{ zIndex: 50 }} id={index} key={index} onClick={(e) => changeIndexZToMax(e)}>
+                  <div className='frame' id={index}>
+                    <div className='topBar' id={index} onDrag={(e) => changeIndexZToMax(e)} >
+                      <div className='Btn closeBtn' id={index} onClick={(e) => handleClose(e)}>
+                        <div className='mirror'>
+                        <FontAwesomeIcon id={index} icon={faXmark} className="icon" />
+                        </div>
                       </div>
-                      <div className='Btn maxBtn'>
-                        <FontAwesomeIcon icon={faWindowMaximize} className="icon" />
+                      <div className='Btn maxBtn' id={index}>
+                      <div className='mirror'>
+                      <FontAwesomeIcon id={index} icon={faWindowMaximize} className="icon" onClick={(e) => handleMaximize(e)}/>
                       </div>
-                      <div id={index.toString()} onClick={(e) => handleMinimize(e)} className='Btn minBtn'>
-                        <FontAwesomeIcon id={index.toString()} icon={faWindowMinimize} className="icon" />
                       </div>
-                      <div className='title' onDrag={(e) => changeIndexZToMax(e)}>
-                        <p>{element.title}</p>
+                      <div id={index} onClick={(e) => handleMinimize(e)} className='Btn minBtn'>
+                        <div className='mirror'>
+                        <FontAwesomeIcon id={index} icon={faWindowMinimize} className="icon" />
+                        </div>
+                      </div>
+                      <div id={index} className='title' onDrag={(e) => changeIndexZToMax(e)}>
+                        <p id={index}>{element.title}</p>
                       </div>
                     </div>
                   </div>
                   {/*<img src={element.src} alt="project" />*/}
-
                 </div>
               </Draggable>
             )
