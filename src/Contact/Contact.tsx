@@ -32,9 +32,10 @@ const Contact = () => {
 
   return (
     <div className="Contact" onClick={(e) => handleFocus(e)}>
-      <img src="https://i.postimg.cc/Pq6bhpSd/contact.webp" alt="header" className='contactHeader' />
+
       <div className='container'>
         <form className='mailerForm' autoComplete='off' onSubmit={(e) => { e.preventDefault(); post_data(e) }}>
+        <img src="https://i.postimg.cc/Pq6bhpSd/contact.webp" alt="header" className='contactHeader' />
           <div className='narrowInputs'>
             <div className='inputWrapper'>
             <label>Name</label>
