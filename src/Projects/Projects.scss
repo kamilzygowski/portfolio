@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100vw;
     //background: url("https://i.postimg.cc/Hs6NdG6j/wbnn4jk6p9j31.jpg");
-    background: url("https://i.postimg.cc/nzyJ8Bgr/1511370.webp");
+    //background: url("https://i.postimg.cc/nzyJ8Bgr/1511370.webp");
     background-size: cover;
     background-repeat: no-repeat;
     h3 {
@@ -10,10 +10,11 @@
         padding-block: 50px;
     }
     .replay {
-        font-size: 86px;
+        margin-top: 25px;
+        font-size: 56px;
         position: absolute;
-        color: #000;
-        opacity: 0.5;
+        color: #fff;
+        opacity:0.6;
         animation: rotate 11s infinite ease-in-out;
         cursor: pointer;
         &:hover {
@@ -26,19 +27,18 @@
         left: 0px;
         bottom: 0px;
         list-style: none;
-        align-content: flex-end;
         padding: 0;
         margin: 0;
+        width: inherit;
+        justify-content: center;
         .minimizedWindow {
             width: 65px;
             height: 65px;
             //background: rgba(255, 255, 255, 0.125);
             border-radius: 10px;
             //box-shadow: rgb(255, 255, 255) 0px 0px 15px 0px inset;
-            margin-inline: 5px;
-            &:nth-of-type(2) {
-                margin-left: 50px;
-            }
+            margin: auto;
+            margin-inline: 15px;
             &:hover {
                 background: rgba(255, 255, 255, 0.151);
                 transition: 1.15s;
@@ -71,31 +71,19 @@
         flex-direction: row;
         flex-wrap: wrap;
         .window {
-            width: 1050px;
-            height: 850px;
+            width: 550px;
+            height: 450px;
             margin: 25px;
-            position: absolute;
             transform: scale(0.6);
             .topBar {
                 margin-left: -2px;
                 margin-top: -1px;
-                width: 1050px;
-                height: 45px;
-                background: linear-gradient(
-                    0deg,
-                    rgba(0, 84, 227, 1) 16%,
-                    rgba(0, 88, 230, 1) 29%,
-                    rgba(3, 101, 241, 1) 45%,
-                    rgba(17, 116, 246, 1) 63%,
-                    rgba(43, 144, 255, 1) 81%,
-                    rgba(63, 151, 255, 1) 94%
-                );
-                z-index: 15;
+                width: inherit;
+                height: inherit;
                 border-radius: 6.5px;
-                border: 1px solid #0043cf;
-                border-bottom: 2px solid #000;
                 display: flex;
                 flex-direction: row-reverse;
+                z-index: 2500;
                 .title {
                     text-align: left;
                     padding-left: 3%;
@@ -113,54 +101,43 @@
                     }
                 }
                 .Btn {
-                    margin-top: 2px;
-                    width: 38px;
-                    height: 38px;
+                    margin-top: 8px;
+                    padding:10px;
+                    width: 19px;
+                    height: 19px;
                     background-color: rebeccapurple;
                     margin-inline: 3px;
-                    border-radius: 7px;
+                    border-radius: 75px;
+                    border: 1px solid rgb(48, 41, 41);
+                    background-position: center;
                     &:nth-of-type(1) {
                         margin-right: 20px;
                     }
                     &:hover {
-                        opacity: 0.15;
-                        transition: 0.4s;
+                        filter: hue-rotate(120deg);
+                        transition: 0.5s;
+                        cursor: pointer;
                     }
+                .icon{
+                    width: inherit;
+                    height: inherit;
+                    color:#fff;
+                }
                 }
                 .closeBtn {
                     background-color: #d8370e;
-                    border: 1px solid #fff;
-                    background: url("https://i.postimg.cc/rpX1yFnB/close.png");
-                    background-position: center;
                 }
                 .maxBtn {
-                    background: url("https://i.postimg.cc/3R32pfH9/maxim.png");
-                    border: 1px solid #fff;
-                    background-position: center;
+                    background-color: #706fd3;
                 }
                 .minBtn {
-                    background: url("https://i.postimg.cc/Hxm9zsbw/Sprite-0002.png");
-                    background-position: center;
-                    border: 1px solid #fff;
+                    background-color: #34ace0;
                 }
             }
             .frame {
                 height: inherit;
                 width: inherit;
-                clip-path: polygon(
-                    0% 0%,
-                    0% 100%,
-                    3% 99%,
-                    3% 14%,
-                    98% 14%,
-                    98% 98%,
-                    1% 98%,
-                    0 100%,
-                    100% 100%,
-                    100% 0%
-                );
-                clip-path: polygon(0% 0%, 0% 100%, 1% 99%, 1% 7%, 99% 7%, 99% 98%, 0 98%, 0 100%, 100% 100%, 100% 0%);
-                background-color: #ece9d8;
+                background-color: #2c2c54;
                 border: 2px solid #000;
                 border-radius: 7.5px;
             }
@@ -169,8 +146,8 @@
                 margin-top: -797px;
                 margin-bottom: 35px;
                 border-radius: 10.5px;
-                width: 1048px;
-                height: 787px;
+                width: inherit;
+                height: inherit;
                 object-fit: cover;
                 border: 2px solid #000;
             }
@@ -196,7 +173,10 @@
     display: none;
 }
 @keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
     100% {
-        transform: rotate(340deg);
+        transform: rotate(360deg);
     }
 }

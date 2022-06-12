@@ -7,7 +7,6 @@ import 'swiper/css';
 import Games from '../Games/Games';
 import Sidebar from '../Sidebar/Sidebar';
 import Contact from '../Contact/Contact';
-import NewProjects from '../NewProjects/NewProjects';
 
 const App = () => {
   // Get the ref to swiper
@@ -42,8 +41,7 @@ const App = () => {
           <Home />
         </SwiperSlide>
         <SwiperSlide>
-          {/*<Projects />*/}
-          <NewProjects />
+          <Projects />
         </SwiperSlide>
         <SwiperSlide>
           <Games />

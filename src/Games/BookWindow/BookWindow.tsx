@@ -14,8 +14,8 @@ const BookWindow = (props:GamesInfo | any) => {
         <div className='page2'>
           <ul className='techStackUl'>
             <p className='techStackTitle'>Created with:</p>
-          {props.gamesInfo.techstack.map((element:string) => {
-         return <li className='techStackLi'>{element}</li>
+          {props.gamesInfo.techstack.map((element:string, index:number) => {
+         return <li className='techStackLi' key={index}>{element}</li>
         })}
           </ul>
         <img src={props.gamesInfo.img} alt="" className='gameImage'/>
