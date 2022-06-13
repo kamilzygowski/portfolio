@@ -16,7 +16,8 @@ const Projects = () => {
     { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/" },
     { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/" }
   ]
-  const hardCodedMaximize = {width: 640+'px', height:460+'px'}
+  const hardCodedBasicSizes:any = {width:420 + 'px', height: 340 + 'px'}
+  const hardCodedMaximize = {width: 938+'px', height:660+'px'}
   const [restartWindows, setRestartWindows] = useState(false)
   const [rememberedProjects, setRememberedProjects] = useState<any>([])
   const windowElement: any = useRef(null);
@@ -65,12 +66,23 @@ const Projects = () => {
     console.log(minimizedWindow)
   }
   const handleMaximize = (e:any) => {
-    // On maximize we will create the window on almost whole screen displaying project info
-    console.log(e.target)
-    console.log(e.target.id)
+    let id = e.target.id;
+    if (e.target.localName === "path"){
+      id = e.target.parentNode.id
+    }
+    console.log('id : ', id)
     const windows:any = document.querySelectorAll('.window');
-    for (const window of windows){
-      console.log(window.id)
+    const projectImg:any = document.querySelectorAll('.projectImg')
+    console.log(windows[id].style.width)
+    if(windows[id].style.width === hardCodedMaximize.width){
+      windows[id].style.width = hardCodedBasicSizes.width
+      windows[id].style.height = hardCodedBasicSizes.height
+      projectImg[id].style.marginTop = -343 + 'px'
+    }else if (windows[id].style.width === hardCodedBasicSizes.width){
+      windows[id].style.width = hardCodedMaximize.width;
+      windows[id].style.height = hardCodedMaximize.height;
+      projectImg[id].style.marginTop = -662 + 'px'
+
     }
   }
 
@@ -81,8 +93,20 @@ const Projects = () => {
     if (allWindows[e.target.id] !== undefined)
       allWindows[e.target.id].style.zIndex = 250 + zCounter;
   }
+  const restartComponent = () => {
+    const windows: NodeListOf<Element | any> = document.querySelectorAll('.window');
+    for(let i = 0; i<windows.length; i++){
+      windows[i].style.width = hardCodedBasicSizes.width
+      windows[i].style.height = hardCodedBasicSizes.height
+    }
+  }
   useEffect(() => {
     setRememberedProjects([...projects])
+    const windows: NodeListOf<Element | any> = document.querySelectorAll('.window');
+    for(let i = 0; i<windows.length; i++){
+      windows[i].style.width = hardCodedBasicSizes.width
+      windows[i].style.height = hardCodedBasicSizes.height
+    }
   }, [])
   return (
     <div className='Projects'>
@@ -121,13 +145,13 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                  {/*<img src={element.src} alt="project" />*/}
+                  <img src={element.src} className="projectImg" id={index} alt="project" draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}/>
                 </div>
               </Draggable>
             )
           })
           : null}
-        {restartWindows ? setTimeout(() => { setProjects([...rememberedProjects]); setRestartWindows(false) }, 0) : null}
+        {restartWindows ? setTimeout(() => { setProjects([...rememberedProjects]); setRestartWindows(false); restartComponent()}, 0) : null}
       </div>
       <div className='tasksBar'>
         <ul className='minimizedWindows' ref={minimizedWindowsElement}>

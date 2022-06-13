@@ -82,7 +82,8 @@
                 border-radius: 6.5px;
                 display: flex;
                 flex-direction: row-reverse;
-                z-index: 2500;
+                z-index: 26500;
+                background-color: rgba(0,0,0,0.4);
                 .title {
                     text-align: left;
                     padding-left: 3%;
@@ -112,8 +113,7 @@
                     .mirror{
                         width: inherit;
                         height: inherit;
-                        z-index: 6000;
-                        background: rgba(0,0,0,0.9);
+                        z-index: 60;
                     }
                     path{
                         z-index: 0;
@@ -151,13 +151,14 @@
             }
 
             img, iframe {
-                margin-top: -797px;
+                margin-top: -343px;
                 margin-bottom: 35px;
                 border-radius: 10.5px;
                 width: inherit;
                 height: inherit;
                 object-fit: cover;
-                border: 2px solid #000;
+                
+                border-image: #000 25;
             }
         }
     }
