@@ -1,10 +1,24 @@
+$topBarColor: #334756;
+$topBarHeight: 50px;
+$projectsBackground: url("https://i.postimg.cc/FK8wBFW4/pexels-karolina-grabowska-4195587.webp");
+$buttonsBackground: #FF4C29;
 .Projects {
     height: 100vh;
     width: 100vw;
     //background: url("https://i.postimg.cc/Hs6NdG6j/wbnn4jk6p9j31.jpg");
     //background: url("https://i.postimg.cc/nzyJ8Bgr/1511370.webp");
+    background: $projectsBackground;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    .projectsHeader{
+        position: absolute;
+        top:20px;
+        right: 40px;
+        font-family: 'Fascinate', cursive;
+        color:#fff;
+        font-size: 64px;
+    }
     h3 {
         margin: 0;
         padding-block: 50px;
@@ -14,7 +28,7 @@
         font-size: 56px;
         position: absolute;
         color: #fff;
-        opacity:0.6;
+        opacity: 0.6;
         animation: rotate 11s infinite ease-in-out;
         cursor: pointer;
         &:hover {
@@ -44,7 +58,7 @@
                 transition: 1.15s;
             }
 
-            img{
+            img {
                 width: 45px;
                 height: 45px;
                 top: 0;
@@ -73,17 +87,18 @@
         .window {
             width: 420px;
             height: 340px;
-            margin: 25px;
+            margin: 15px;
+            position: absolute;
             .topBar {
-                margin-left: -2px;
-                margin-top: -1px;
                 width: inherit;
-                height: inherit;
-                border-radius: 6.5px;
+                height: $topBarHeight;
+                border-radius: 7.5px;
                 display: flex;
+                align-self: flex-start;
                 flex-direction: row-reverse;
-                z-index: 26500;
-                background-color: rgba(0,0,0,0.4);
+                z-index: 55555;
+                background-color: $topBarColor;
+                position: relative;
                 .title {
                     text-align: left;
                     padding-left: 3%;
@@ -102,20 +117,21 @@
                 }
                 .Btn {
                     margin-top: 8px;
-                    padding:10px;
-                    width: 19px;
-                    height: 19px;
-                    background-color: rebeccapurple;
+                    padding: 8px;
+                    width: 16px;
+                    height: 16px;
+                    //background-color: rebeccapurple;
                     margin-inline: 3px;
                     border-radius: 75px;
                     border: 1px solid rgb(48, 41, 41);
                     background-position: center;
-                    .mirror{
+                    z-index: 55555;
+                    .mirror {
                         width: inherit;
                         height: inherit;
                         z-index: 60;
                     }
-                    path{
+                    path {
                         z-index: 0;
                     }
                     &:nth-of-type(1) {
@@ -126,38 +142,38 @@
                         transition: 0.5s;
                         cursor: pointer;
                     }
-                .icon{
-                    width: inherit;
-                    height: inherit;
-                    color:#fff;
-                }
+                    .icon {
+                        padding: 1px;
+                        width: inherit;
+                        height: inherit;
+                        color: #fff;
+                        display: flex;
+                        justify-self: center;
+                    }
                 }
                 .closeBtn {
-                    background-color: #d8370e;
+                    //background-color: #d8370e;
+                    background-color: $buttonsBackground;
                 }
                 .maxBtn {
-                    background-color: #706fd3;
+                    // background-color: #706fd3;
+                    background-color: $buttonsBackground;
                 }
                 .minBtn {
-                    background-color: #34ace0;
+                    // background-color: #34ace0;
+                    background-color: $buttonsBackground;
                 }
             }
-            .frame {
-                height: inherit;
-                width: inherit;
-                background-color: #2c2c54;
-                border: 2px solid #000;
-                border-radius: 7.5px;
-            }
 
-            img, iframe {
-                margin-top: -343px;
+            img,
+            iframe {
+                margin-top: -$topBarHeight;
                 margin-bottom: 35px;
                 border-radius: 10.5px;
                 width: inherit;
                 height: inherit;
                 object-fit: cover;
-                
+
                 border-image: #000 25;
             }
         }
@@ -182,7 +198,7 @@
     display: none;
 }
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
     100% {

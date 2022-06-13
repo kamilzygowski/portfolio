@@ -13,8 +13,9 @@ interface Project {
 const Projects = () => {
   const initialProjects: Project[] = [
     { src: "https://i.postimg.cc/MpCrVwHw/planetraium.png", id: 0, title: 'Planetarium', iframe: "https://swedishsailor.github.io/planetarium/" },
-    { src: "https://i.postimg.cc/zvCBj8Sg/franky.png", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/" },
-    { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/" }
+    { src: "https://i.postimg.cc/T1Gfzmvv/fc.webp", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/" },
+    { src: "https://i.postimg.cc/3rzMz0xW/pexels-arina-krasnikova-6317441.jpg", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/" },
+    { src: "https://i.postimg.cc/htWTCLsP/dit.webp", id: 3, title: 'Deep in topic', iframe: "https://deepintopic.pl/" },
   ]
   const hardCodedBasicSizes:any = {width:420 + 'px', height: 340 + 'px'}
   const hardCodedMaximize = {width: 938+'px', height:660+'px'}
@@ -65,6 +66,17 @@ const Projects = () => {
     ])
     console.log(minimizedWindow)
   }
+  const arrangeWindows = () => {
+    const allWindows: any = document.querySelectorAll('.window')
+    const screenWidth = window.innerWidth
+    const screenHeight = window.innerHeight
+    console.log(allWindows, screenWidth, screenHeight)
+    for (let i=0; i<allWindows.length; i++){
+      allWindows[i].style.left = (i * (screenWidth/allWindows.length - 60) + 20) + 'px'
+      allWindows[i].style.top = (i * (screenHeight/allWindows.length - 40) + 20) + 'px'
+      console.log(allWindows[i].style.left, allWindows[i].style.top)
+    }
+  }
   const handleMaximize = (e:any) => {
     let id = e.target.id;
     if (e.target.localName === "path"){
@@ -77,15 +89,14 @@ const Projects = () => {
     if(windows[id].style.width === hardCodedMaximize.width){
       windows[id].style.width = hardCodedBasicSizes.width
       windows[id].style.height = hardCodedBasicSizes.height
-      projectImg[id].style.marginTop = -343 + 'px'
+     // projectImg[id].style.marginTop = -343 + 'px'
     }else if (windows[id].style.width === hardCodedBasicSizes.width){
       windows[id].style.width = hardCodedMaximize.width;
       windows[id].style.height = hardCodedMaximize.height;
-      projectImg[id].style.marginTop = -662 + 'px'
+     //projectImg[id].style.marginTop = -662 + 'px'
 
     }
   }
-
   const changeIndexZToMax = (e: any) => {
     const allWindows: any = document.querySelectorAll('.window')
     setZCounter(zCounter+1)
@@ -95,6 +106,7 @@ const Projects = () => {
   }
   const restartComponent = () => {
     const windows: NodeListOf<Element | any> = document.querySelectorAll('.window');
+    arrangeWindows()
     for(let i = 0; i<windows.length; i++){
       windows[i].style.width = hardCodedBasicSizes.width
       windows[i].style.height = hardCodedBasicSizes.height
@@ -103,6 +115,7 @@ const Projects = () => {
   useEffect(() => {
     setRememberedProjects([...projects])
     const windows: NodeListOf<Element | any> = document.querySelectorAll('.window');
+    arrangeWindows()
     for(let i = 0; i<windows.length; i++){
       windows[i].style.width = hardCodedBasicSizes.width
       windows[i].style.height = hardCodedBasicSizes.height
@@ -110,6 +123,7 @@ const Projects = () => {
   }, [])
   return (
     <div className='Projects'>
+      <h1 className='projectsHeader'>Projects</h1>
       {/*<iframe src="https://swedishsailor.github.io/portfolio-game/" className='iproject' title='portfolio game' />*/}
       <FontAwesomeIcon icon={faArrowRotateRight} className="replay" onClick={() => { setMinimizedWindows([]); setRestartWindows(true) }} />{/*Projects*/}
       <div className='projectsList' ref={windowElement}>
@@ -123,7 +137,6 @@ const Projects = () => {
                 onDrag={(e) => changeIndexZToMax(e)}
               >
                 <div className='window' style={{ zIndex: 50 }} id={index} key={index} onClick={(e) => changeIndexZToMax(e)}>
-                  <div className='frame' id={index}>
                     <div className='topBar' id={index} onDrag={(e) => changeIndexZToMax(e)} >
                       <div className='Btn closeBtn' id={index} onClick={(e) => handleClose(e)}>
                         <div className='mirror'>
@@ -144,8 +157,8 @@ const Projects = () => {
                         <p id={index}>{element.title}</p>
                       </div>
                     </div>
-                  </div>
                   <img src={element.src} className="projectImg" id={index} alt="project" draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}/>
+                  {/*<iframe src={element.iframe} className="projectImg" id={index} draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}/>*/}
                 </div>
               </Draggable>
             )
