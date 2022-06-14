@@ -1,6 +1,6 @@
-$topBarColor: #334756;
+$topBarColor: #334756e1;
 $topBarHeight: 50px;
-$projectsBackground: url("https://i.postimg.cc/FK8wBFW4/pexels-karolina-grabowska-4195587.webp");
+$projectsBackground: linear-gradient(to top, #ff0844 0%, #ffb199 100%);;
 $buttonsBackground: #FF4C29;
 .Projects {
     height: 100vh;
@@ -18,6 +18,42 @@ $buttonsBackground: #FF4C29;
         font-family: 'Fascinate', cursive;
         color:#fff;
         font-size: 64px;
+    }
+    .projectInfoContainer{
+        margin-top: -699px;
+        border-radius: 7.5px;
+        width: inherit;
+        height: inherit;
+        display: none;
+        position: absolute;
+        color:#000;
+        transition: 0.1s;
+        flex-direction: column;
+        align-items: center;
+        .header{
+            margin-block: 55px;
+            height: 200px;
+            margin-top: 70px;
+            font-size: 36px;
+            font-family: "Merienda", cursive;
+            //background: rgba(0,0,0,0.63);
+            color: #fff;
+            padding-inline:150px;
+            padding-top:100px;
+            width:460px;
+            background: url("https://i.postimg.cc/xT6gvG6J/blobby2.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }  
+        .linkTo{
+            font-size: 54px;
+            text-decoration:none; 
+            font-family: 'Fascinate Inline', cursive;     
+            color:#fff;
+            animation: link 4s infinite;
+            margin-block: 65px;
+        }
     }
     h3 {
         margin: 0;
@@ -48,16 +84,13 @@ $buttonsBackground: #FF4C29;
         .minimizedWindow {
             width: 65px;
             height: 65px;
-            //background: rgba(255, 255, 255, 0.125);
             border-radius: 10px;
-            //box-shadow: rgb(255, 255, 255) 0px 0px 15px 0px inset;
             margin: auto;
             margin-inline: 15px;
             &:hover {
                 background: rgba(255, 255, 255, 0.151);
                 transition: 1.15s;
             }
-
             img {
                 width: 45px;
                 height: 45px;
@@ -143,6 +176,7 @@ $buttonsBackground: #FF4C29;
                         cursor: pointer;
                     }
                     .icon {
+                        font-size: 18px;
                         padding: 1px;
                         width: inherit;
                         height: inherit;
@@ -173,7 +207,6 @@ $buttonsBackground: #FF4C29;
                 width: inherit;
                 height: inherit;
                 object-fit: cover;
-
                 border-image: #000 25;
             }
         }
@@ -203,5 +236,16 @@ $buttonsBackground: #FF4C29;
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+@keyframes link {
+    0%{
+        text-shadow: 0px 0px 0px rgba(255, 232, 0, 1);
+    }
+    50%{
+        text-shadow: 4px 4px 49px rgb(255, 0, 0);
+    }
+    100%{
+        text-shadow: 0px 0px 0px rgba(255, 232, 0, 1);
     }
 }
