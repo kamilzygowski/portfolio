@@ -19,13 +19,13 @@ export interface GamesInfo{
 const Games = () => {
   const bookGif:any = React.createElement('img', {src:"https://i.postimg.cc/Jztj2NpP/op.gif", className:'bookGif'})
   const gamesInfoArr: GamesInfo[] = [{
-    title: 'Dimension Eye', description: 'Lorem ipsum dolor sit amet, cation ullamco laboris nisi uvoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    techstack:['Unity'], img: 'https://i.postimg.cc/vHrrQTby/deprev.png', href: 'https://swedishsailor.github.io/dimensioneye/'
+    title: 'Dimension Eye', description: `2D platformer game. Your main quest is to find out what's goin on in this world. The only things you find are.. eyes...`,
+    techstack:['Unity'], img: 'https://i.postimg.cc/fbBxmVpK/deeee.webp', href: 'https://swedishsailor.github.io/dimensioneye/'
   },
-  { title: 'Mouse Sabre', description: 'XDDDDD', techstack:['TypeScript', 'NodeJS', 'MySQL'], img: 'https://i.postimg.cc/13BhsVGk/mousesabre.png', href: 'https://swedishsailor.github.io/mousesabre/' },
-  { title: 'Milion Lasers', description: 'XDDD', techstack:['Unity'], img: 'https://i.postimg.cc/fT4hKNWr/milion-lasers.png', href: 'https://swedishsailor.github.io/milionlasers/' },
-  { title: `It's gonna be ok`, description: 'XDDD', techstack:['JavaScript'], img: 'https://i.postimg.cc/MKyJ3FvK/itsgonnabeok.png', href: 'https://marcodeevil.github.io/KRZYKAM-LD50/' },
-  { title: 'Multi Arena', description: 'XDDDDDD', techstack:['JavaScript', 'NodeJS'], img: 'https://i.postimg.cc/Bn49rBK5/multiarena.png', href: 'https://swedishsailor.github.io/multiarena/' }]
+  { title: 'Mouse Sabre', description: `Slay your enemies with magic sword, watch out enemies mutations, use your special ability "Samurai Slash"`, techstack:['TypeScript', 'NodeJS', 'MySQL'], img: 'https://i.postimg.cc/WbTgW6Vn/mss.webp', href: 'https://swedishsailor.github.io/mousesabre/' },
+  { title: 'Milion Lasers', description: '2D action coop game. You need one friend on hot-seat to take the challenge. Try to avoid all the obstacles and remember to be close to your partner', techstack:['Unity'], img: 'https://i.postimg.cc/fT4hKNWr/milion-lasers.png', href: 'https://swedishsailor.github.io/milionlasers/' },
+  { title: `It's gonna be ok`, description: 'Game created for Ludum Dare game jam in 4 hours. Delay the inevitable...', techstack:['JavaScript'], img: 'https://i.postimg.cc/MKyJ3FvK/itsgonnabeok.png', href: 'https://marcodeevil.github.io/KRZYKAM-LD50/' },
+  { title: 'Multi Arena', description: 'Online multiplayer 1 versus 1 arena game. Get a buddy, paste game code to him and fight!', techstack:['JavaScript', 'NodeJS'], img: 'https://i.postimg.cc/Bn49rBK5/multiarena.png', href: 'https://swedishsailor.github.io/multiarena/' }]
   const allElems = document.querySelectorAll(".gamesLi")
   const liStyles: ListStyle[] = [{ z: 45, right: 750, width: 600, bottom: -65 },
   { z: 40, right: 600, width: 600, bottom: 0 },
@@ -63,12 +63,15 @@ const Games = () => {
     <div className='background'>
       {isClicked ? <div className='gamesMirror' onClick={() => setClick(false)}/> : null}
       {isClicked ? <BookWindow gamesInfo={gamesInfoArr[chosenGameId]}/> : null}
-      {isClicked ?  React.createElement('img', {className:'bookGif', src:'https://i.postimg.cc/6Qv3DY8k/pbook.gif', onClick:(e:any) => {
+      {isClicked ?  React.createElement('img', {className:'bookGif', src:'https://i.postimg.cc/ydvrDr6f/pbook.gif', onClick:(e:any) => {
         setClick(false)
       }}) : React.createElement('img', {style:{position: 'absolute'}})}
       {/*isClicked ? <img src='https://i.postimg.cc/GtwZMPGf/SHORT.gif' className='bookGif' alt="" onClick={() => setClick(false)} /> : null*/}
       <div className='Games'>
         <img className='gamesHeader' src="https://i.postimg.cc/fWSgntbp/games-Header-POKELESS.webp"/>
+        <div className='coin'>
+          {/*<img src="https://i.postimg.cc/fTC2BRGV/ZjtR.gif"/>*/}
+        </div>
         {/*isClicked ? <PopUp setClick={setClick} gameInfo={gameInfo}></PopUp> : null*/}
         <ul className='gamesUl'>
           {/* TITLE LINK*/}

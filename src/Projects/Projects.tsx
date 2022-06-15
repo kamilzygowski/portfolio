@@ -17,8 +17,8 @@ const Projects = () => {
   const initialProjects: Project[] = [
     { src: "https://i.postimg.cc/W3YLg7v8/planetarium-Logo.webp", id: 0, title: 'Planetarium', iframe: "https://swedishsailor.github.io/planetarium/", header: '3D solar system model created with 3JS library', image:'https://i.postimg.cc/xdW8z7rf/CkZ.gif'},
     { src: "https://i.postimg.cc/Fzhvh6GP/frankycars-Logo-1.webp", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/", header:"Car Warehouse ", image:"https://i.postimg.cc/FzGhDC6J/EaH.gif"},
-    { src: "https://i.postimg.cc/kg0q1CBS/ss.webp", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/", header:"", image:"https://i.postimg.cc/ZRMcpJb9/1sDf.gif" },
-    { src: "https://i.postimg.cc/JzTzPjMy/dit.webp", id: 3, title: 'Deep in topic', iframe: "https://deepintopic.pl/", header:"", image:"https://i.postimg.cc/fTkGGbtP/2vCZ.gif"},
+    { src: "https://i.postimg.cc/kg0q1CBS/ss.webp", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/", header:"Old portfolio", image:"https://i.postimg.cc/ZRMcpJb9/1sDf.gif" },
+    { src: "https://i.postimg.cc/JzTzPjMy/dit.webp", id: 3, title: 'Deep in topic', iframe: "https://deepintopic.pl/", header:"Deep in topic", image:"https://i.postimg.cc/fTkGGbtP/2vCZ.gif"},
   ]
   const hardCodedBasicSizes:any = {width:420 + 'px', height: 340 + 'px'}
   const hardCodedMaximize = {width: 938+'px', height:660+'px'}
