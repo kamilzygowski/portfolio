@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Games.scss'
-import PopUp from './PopUp/PopUp';
 import BookWindow from './BookWindow/BookWindow'
 
 interface ListStyle {
