@@ -18,6 +18,9 @@
         @media (max-width: 560px) and (min-width: 0px) {
             flex-direction: column;
         }
+        .expandDiv{
+            width:100%;
+        }
         .whatIDo {
             display: flex;
             flex-direction: column;

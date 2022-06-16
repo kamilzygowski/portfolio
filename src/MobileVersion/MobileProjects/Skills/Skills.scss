@@ -1,0 +1,26 @@
+.Skills{
+    width:100%;
+    margin:0;
+    .skillsContainer{
+        list-style: none;
+        width:100%;
+        .skillsLi{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width:80%;
+            padding:5px;
+            .icon{
+                width:36px;
+                height:36px;
+                margin-right:10px;
+            }
+            .bar{
+                height:20px;
+                border-radius: 95px;
+                width:1%;
+                transition: 2s;
+            }
+        }
+    }
+}

@@ -2,11 +2,11 @@ import React from 'react'
 import './MobileFooter.scss'
 
 const MobileFooter = () => {
-    const date=  new Date()
+  const date: Date = new Date()
   return (
     <footer className='MobileFooter'>
-        <p className='date'>@{date.getFullYear()} </p>
-        <p className='name'> Kamil Żygowski - SwedishSailor</p>
+      <p className='date'>@{date.getFullYear()} </p>
+      <p className='name'> Kamil Żygowski - SwedishSailor</p>
     </footer>
   )
 }
