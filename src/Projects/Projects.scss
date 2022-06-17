@@ -1,7 +1,7 @@
 $topBarColor: #334756e1;
 $topBarHeight: 50px;
-$projectsBackground: linear-gradient(to top, #ff0844 0%, #ffb199 100%);;
-$buttonsBackground: #FF4C29;
+$projectsBackground: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+$buttonsBackground: #ff4c29;
 .Projects {
     height: 100vh;
     width: 100vw;
@@ -11,26 +11,26 @@ $buttonsBackground: #FF4C29;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    .projectsHeader{
+    .projectsHeader {
         position: absolute;
-        top:20px;
+        top: 20px;
         right: 240px;
-        font-family: 'Fascinate', cursive;
-        color:#fff;
+        font-family: "Fascinate", cursive;
+        color: #fff;
         font-size: 86px;
     }
-    .projectInfoContainer{
+    .projectInfoContainer {
         margin-top: -699px;
         border-radius: 7.5px;
         width: inherit;
         height: inherit;
         display: none;
         position: absolute;
-        color:#000;
+        color: #000;
         transition: 0.1s;
         flex-direction: column;
         align-items: center;
-        .header{
+        .header {
             margin-block: 55px;
             height: 200px;
             margin-top: 70px;
@@ -38,19 +38,19 @@ $buttonsBackground: #FF4C29;
             font-family: "Merienda", cursive;
             //background: rgba(0,0,0,0.63);
             color: #fff;
-            padding-inline:150px;
-            padding-top:100px;
-            width:460px;
+            padding-inline: 150px;
+            padding-top: 100px;
+            width: 460px;
             background: url("https://i.postimg.cc/xT6gvG6J/blobby2.png");
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
-        }  
-        .linkTo{
+        }
+        .linkTo {
             font-size: 54px;
-            text-decoration:none; 
-            font-family: 'Fascinate Inline', cursive;     
-            color:#fff;
+            text-decoration: none;
+            font-family: "Fascinate Inline", cursive;
+            color: #fff;
             animation: link 4s infinite;
             margin-block: 65px;
         }
@@ -239,13 +239,13 @@ $buttonsBackground: #FF4C29;
     }
 }
 @keyframes link {
-    0%{
+    0% {
         text-shadow: 0px 0px 0px rgba(255, 232, 0, 1);
     }
-    50%{
+    50% {
         text-shadow: 4px 4px 49px rgb(255, 0, 0);
     }
-    100%{
+    100% {
         text-shadow: 0px 0px 0px rgba(255, 232, 0, 1);
     }
 }

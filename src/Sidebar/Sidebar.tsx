@@ -14,7 +14,7 @@ const Sidebar = (props: any) => {
     }
     setTimeout(() => {
       setHover(true);
-    }, 1200);
+    }, 800);
   }
   const scrollToComponent = (id: number) => {
     props.swipeTo(id)

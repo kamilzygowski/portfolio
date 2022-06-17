@@ -1,89 +1,84 @@
-.background{
-    //background: url("https://i.postimg.cc/4yYT0KzV/perspective-floor.png");
+.background {
     background-position: bottom;
-    //background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-
     background: url("https://i.postimg.cc/NMMrCLNB/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-
-    .gamesMirror{
+    .gamesMirror {
         position: absolute;
         width: 100%;
-        height:100%;
-        background: rgba(0,0,0,0.5);
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
         z-index: 400;
     }
 }
-.bookGif{
+.bookGif {
     position: absolute;
-    width:90%;
-    left:0;
+    width: 90%;
+    left: 0;
     right: 0;
-    top:0;
-    bottom:0;
-    margin:auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     z-index: 500;
 }
-.Games{
-    height:100vh;
-    width:100vw;
+.Games {
+    height: 100vh;
+    width: 100vw;
     background: url("https://i.postimg.cc/653sBtGm/table.gif");
     background-repeat: no-repeat;
     background-size: 160%;
     background-position: top;
-    @media (max-width:2300px) and (min-width:2000px) {
+    @media (max-width: 2300px) and (min-width: 2000px) {
         background-size: 160%;
     }
-    @media (max-width:2000px) and (min-width:1700px) {
+    @media (max-width: 2000px) and (min-width: 1700px) {
         background-size: 180%;
     }
-    @media (max-width:1700px) and (min-width:1285px) {
+    @media (max-width: 1700px) and (min-width: 1285px) {
         background-size: 200%;
     }
-    @media (max-width:1285px) and (min-width:800px) {
+    @media (max-width: 1285px) and (min-width: 800px) {
         background-size: 260%;
     }
-    .gamesHeader{
+    .gamesHeader {
         position: absolute;
-        left:95px;
-        top:15px;
-        @media (max-width:3000px) and (min-width:2300px) {
-            width:650px;
+        left: 95px;
+        top: 15px;
+        @media (max-width: 3000px) and (min-width: 2300px) {
+            width: 650px;
         }
-        @media (max-width:2300px) and (min-width:2000px) {
-            width:600px;
+        @media (max-width: 2300px) and (min-width: 2000px) {
+            width: 600px;
         }
-        @media (max-width:2000px) and (min-width:1700px) {
-            width:600px;
+        @media (max-width: 2000px) and (min-width: 1700px) {
+            width: 600px;
         }
-        @media (max-width:1700px) and (min-width:1285px) {
-            width:555px;
+        @media (max-width: 1700px) and (min-width: 1285px) {
+            width: 555px;
         }
-        @media (max-width:1285px) and (min-width:800px) {
-            width:500px;
+        @media (max-width: 1285px) and (min-width: 800px) {
+            width: 500px;
         }
     }
-
-    .gamesUl{
+    .gamesUl {
         position: absolute;
         display: flex;
-        bottom:0;
-        right:0;
-        left:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
         list-style: none;
-        height:80%;
-        width:60%;
-        margin:auto;
+        height: 80%;
+        width: 60%;
+        margin: auto;
         align-items: center;
         z-index: 50;
     }
-    .gamesLi{
+    .gamesLi {
         text-align: center;
-        height:80%;
-        width:400px;
-        color:#000;
+        height: 80%;
+        width: 400px;
+        color: #000;
         background-color: red;
         position: inherit;
         transition: ease-out 0.4s;
@@ -91,144 +86,131 @@
         flex-direction: column;
         align-items: flex-end;
         padding-bottom: 1000px;
-
-        @media (max-width:2300px) and (min-width:2000px) {
-            width:300px;
+        @media (max-width: 2300px) and (min-width: 2000px) {
+            width: 300px;
         }
-        @media (max-width:2000px) and (min-width:1700px) {
-            width:280px;
+        @media (max-width: 2000px) and (min-width: 1700px) {
+            width: 280px;
         }
-        @media (max-width:1700px) and (min-width:1285px) {
-            width:200px;
+        @media (max-width: 1700px) and (min-width: 1285px) {
+            width: 200px;
         }
-        @media (max-width:1285px) and (min-width:800px) {
-            width:200px;
+        @media (max-width: 1285px) and (min-width: 800px) {
+            width: 200px;
         }
-        /*&:nth-of-type(1){
-            z-index: 45;
-            right:1090px;
-            bottom:-1065px;
-            background:url("https://i.postimg.cc/fR72nYnr/Sprite-0001.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-
-            &:hover{
-                bottom:-749px;
-            }
-        }*/
-        &:nth-of-type(1){
+        &:nth-of-type(1) {
             z-index: 40;
-            right:930px;
-            bottom:-1050px;
-            background:url("https://i.postimg.cc/FHb5PmDy/deeee.webp");
+            right: 930px;
+            bottom: -1050px;
+            background: url("https://i.postimg.cc/FHb5PmDy/deeee.webp");
             background-size: contain;
             background-repeat: no-repeat;
-            @media (max-width:1700px) and (min-width:1285px) {
-                right:790px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                right: 790px;
             }
-            @media (max-width:1285px) and (min-width:800px) {
-                right:480px;
+            @media (max-width: 1285px) and (min-width: 800px) {
+                right: 480px;
             }
-            &:hover{
-                bottom:-800px;
+            &:hover {
+                bottom: -800px;
             }
         }
-        &:nth-of-type(2){
+        &:nth-of-type(2) {
             z-index: 35;
-            right:570px;
-            bottom:-985px;
-            background:url("https://i.postimg.cc/KYJX2fX4/mouse-Sabre-Img.webp");
+            right: 570px;
+            bottom: -985px;
+            background: url("https://i.postimg.cc/KYJX2fX4/mouse-Sabre-Img.webp");
             background-size: contain;
             background-repeat: no-repeat;
-            @media (max-width:1700px) and (min-width:1285px) {
-                right:590px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                right: 590px;
             }
-            @media (max-width:1285px) and (min-width:800px) {
-                right:330px;
+            @media (max-width: 1285px) and (min-width: 800px) {
+                right: 330px;
             }
-            &:hover{
-                bottom:-730px;
+            &:hover {
+                bottom: -730px;
             }
         }
-        &:nth-of-type(3){
+        &:nth-of-type(3) {
             z-index: 30;
-            right:310px;
-            bottom:-920px;
-            background:url("https://i.postimg.cc/FsLQL0Sn/milionlasers.webp");
+            right: 310px;
+            bottom: -920px;
+            background: url("https://i.postimg.cc/FsLQL0Sn/milionlasers.webp");
             background-size: contain;
             background-repeat: no-repeat;
-            @media (max-width:1700px) and (min-width:1285px) {
-                right:390px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                right: 390px;
             }
-            @media (max-width:1285px) and (min-width:800px) {
-                right:180px;
+            @media (max-width: 1285px) and (min-width: 800px) {
+                right: 180px;
             }
-            &:hover{
-                bottom:-670px;
+            &:hover {
+                bottom: -670px;
             }
         }
-        &:nth-of-type(4){
+        &:nth-of-type(4) {
             z-index: 25;
-            right:50px;
-            bottom:-855px;
-            background:url("https://i.postimg.cc/TPR8FS4Z/itsgonnabeok.webp");
+            right: 50px;
+            bottom: -855px;
+            background: url("https://i.postimg.cc/TPR8FS4Z/itsgonnabeok.webp");
             background-size: contain;
             background-repeat: no-repeat;
-            @media (max-width:1700px) and (min-width:1285px) {
-                right:190px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                right: 190px;
             }
-            @media (max-width:1285px) and (min-width:800px) {
-                right:30px;
+            @media (max-width: 1285px) and (min-width: 800px) {
+                right: 30px;
             }
-            &:hover{
-                bottom:-605px;
+            &:hover {
+                bottom: -605px;
             }
         }
-        &:nth-of-type(5){
+        &:nth-of-type(5) {
             z-index: 20;
-            right:-210px;
-            bottom:-790px;
-            background:url("https://i.postimg.cc/Tw4ZyP36/multiarena.webp");
+            right: -210px;
+            bottom: -790px;
+            background: url("https://i.postimg.cc/Tw4ZyP36/multiarena.webp");
             background-size: contain;
             background-repeat: no-repeat;
-            @media (max-width:1700px) and (min-width:1285px) {
-                right:-10px;
+            @media (max-width: 1700px) and (min-width: 1285px) {
+                right: -10px;
             }
-            @media (max-width:1285px) and (min-width:800px) {
-                right:-120px;
+            @media (max-width: 1285px) and (min-width: 800px) {
+                right: -120px;
             }
-            &:hover{
-                bottom:-540px;
+            &:hover {
+                bottom: -540px;
             }
         }
-        p{
+        p {
             font-size: 24px;
             height: 325px;
             position: absolute;
             transform: rotate(90deg);
-            top:160px;
-            padding-left:20px;
+            top: 160px;
+            padding-left: 20px;
         }
-        .firstP{
-            right:140px;
+        .firstP {
+            right: 140px;
         }
-        .secondP{
-            right:200px;
+        .secondP {
+            right: 200px;
         }
-        .thirdP{
-            right:210px;
+        .thirdP {
+            right: 210px;
         }
-        .fourthP{
-            right:220px;
+        .fourthP {
+            right: 220px;
         }
-        .fifthP{
-            right:200px;
+        .fifthP {
+            right: 200px;
         }
     }
-    .gameInfo{
+    .gameInfo {
         //background-color: red;
-        width:180px;
-        height:70%;
+        width: 180px;
+        height: 70%;
         margin-top: 15vh;
     }
 }

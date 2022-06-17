@@ -6,12 +6,10 @@ interface skillItem {
     alt: string;
     pos: number;
 }
-
 // This func create UseEffect action but without initial render!
 // We use it to load the skills items rendered
 const useDidMountEffect = (func: CallableFunction, deps?: any[]): void => {
     const didMount = useRef<boolean>(false);
-
     useEffect((): void => {
         if (didMount.current) {
             func();
@@ -20,7 +18,6 @@ const useDidMountEffect = (func: CallableFunction, deps?: any[]): void => {
         }
     }, deps);
 };
-
 const Hero = () => {
     const [offset, setOffset] = useState<{ x: number, y: number, delta: number }>({ x: 0, y: 0, delta: 10 })
     const skillsData: skillItem[] = [{ src: 'https://i.postimg.cc/vmQ2YB7F/icons8-adobe-photoshop-480.png', alt: 'Photoshop', pos: 50 },
@@ -35,55 +32,41 @@ const Hero = () => {
     { src: "https://i.postimg.cc/HsbCjrMV/icons8-unity-480.png", alt: 'Unity', pos: 950 },
     { src: "https://i.postimg.cc/TP1Ccjmz/icons8-python-48.png", alt: 'Python', pos: 1050 },
     { src: "https://i.postimg.cc/j2HXHHWB/icons8-adobe-after-effects-96.png", alt: 'After Effect', pos: 1150 }]
-
     const [circleContainer, setCircleContainer] = useState<any>(null);
-
     let [start, setStart] = useState<number>(0);
-
-
     useEffect((): void => {
         const rendering: NodeJS.Timer = setInterval((): void => {
             setStart(start++)
         }, 25)
     }, [])
-
     let type: number = 1,//circle type - 1 whole, 0.5 half, 0.25 quarter
-        radius: string = `${(window.innerWidth/8).toString()}px`;
-    //start = 0;
-
-    const firstRender = useRef<boolean>(false);
-
+        radius: string = `${(window.innerWidth / 8).toString()}px`;
     useDidMountEffect((): void => {
         let numberOfElems: number = (type === 1) ? Array.from(circleContainer.children).length : Array.from(circleContainer.children).length - 1
         let slice: number = 360 * type / numberOfElems;
-
         Array.from(circleContainer.children).forEach((elem: any, index: number): void => {
-
             let rotate: number = slice * index + start;
             let rotateReverse: number = rotate * -1;
             elem.style.transform = 'rotate(' + rotate + 'deg) translate(' + radius + ') rotate(' + rotateReverse + 'deg)'
-
         })
-
     })
-
     return (
         <div className='Hero'>
             <div className='backgroundImg'>
-            <div className='info'>
-                <div className='skillsImages'>
-                    <ul className='list' ref={function (element: any) { setCircleContainer(element) }}>
-                        {skillsData.map((element: any, index: number) => {
-                            return <li className='listItem' key={index} style={
-                                {
-                                    position: 'absolute',
-                                    left: `${offset.x + (window.innerWidth / 4 - 90)}px`,
-                                    top: `${offset.y + (window.innerHeight / 2 - 190)}px`
-                                }}><img src={element.src} alt={element.alt} /><p>{element.alt}</p></li>
-                        })}
-                    </ul>
+                <div className='info'>
+                    <div className='skillsImages'>
+                        <ul className='list' ref={function (element: any) { setCircleContainer(element) }}>
+                            {skillsData.map((element: any, index: number) => {
+                                return <li className='listItem' key={index} style={
+                                    {
+                                        position: 'absolute',
+                                        left: `${offset.x + (window.innerWidth / 4 - 90)}px`,
+                                        top: `${offset.y + (window.innerHeight / 2 - 190)}px`
+                                    }}><img src={element.src} alt={element.alt} /><p>{element.alt}</p></li>
+                            })}
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </div>
 
         </div>
