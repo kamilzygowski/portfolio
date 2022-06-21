@@ -15,10 +15,11 @@ interface Project {
 }
 const Projects = () => {
   const initialProjects: Project[] = [
-    { src: "https://i.postimg.cc/W3YLg7v8/planetarium-Logo.webp", id: 0, title: 'Planetarium', iframe: "https://swedishsailor.github.io/planetarium/", header: '3D solar system model created with 3JS library', image: 'https://i.postimg.cc/xdW8z7rf/CkZ.gif' },
-    { src: "https://i.postimg.cc/Fzhvh6GP/frankycars-Logo-1.webp", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/", header: "Car Warehouse ", image: "https://i.postimg.cc/FzGhDC6J/EaH.gif" },
-    { src: "https://i.postimg.cc/kg0q1CBS/ss.webp", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/", header: "Old portfolio", image: "https://i.postimg.cc/ZRMcpJb9/1sDf.gif" },
-    { src: "https://i.postimg.cc/JzTzPjMy/dit.webp", id: 3, title: 'Deep in topic', iframe: "https://deepintopic.pl/", header: "Deep in topic", image: "https://i.postimg.cc/fTkGGbtP/2vCZ.gif" },
+    { src: "https://i.postimg.cc/W3YLg7v8/planetarium-Logo.webp", id: 0, title: 'Planetarium', iframe: "https://swedishsailor.github.io/planetarium/", header: '3D solar system model created with 3JS library', image: 'https://i.postimg.cc/Xq76rCQt/pl.gif' },
+    { src: "https://i.postimg.cc/Fzhvh6GP/frankycars-Logo-1.webp", id: 1, title: 'Franky Cars', iframe: "https://swedishsailor.github.io/frankyCars/", header: "Car Warehouse ", image: "https://i.postimg.cc/G2RC1NYL/fc.gif" },
+    { src: "https://i.postimg.cc/kg0q1CBS/ss.webp", id: 2, title: 'Old Portfolio', iframe: "https://swedishsailor.github.io/", header: "Old portfolio", image: "https://i.postimg.cc/Y0nKYCP0/ss-3.gif" },
+    { src: "https://i.postimg.cc/JzTzPjMy/dit.webp", id: 3, title: 'Deep in topic', iframe: "https://deepintopic.pl/", header: "Deep in topic", image: "https://i.postimg.cc/nLBJgZXS/dit.gif" },
+    { src: "https://i.postimg.cc/CK2X72MM/bot.webp", id: 4, title: 'Bots', iframe: "", header: "Bots", image: "https://i.postimg.cc/RVd5cNwR/aa-3.gif" },
   ]
   const hardCodedBasicSizes: any = { width: 420 + 'px', height: 340 + 'px' }
   const hardCodedMaximize = { width: 938 + 'px', height: 660 + 'px' }
@@ -166,9 +167,9 @@ const Projects = () => {
                     </div>
                   </div>
                   <img src={element.src} className="projectImg" id={index} alt="project" draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)} />
-                  <div className='projectInfoContainer' style={{ background: `url(${element.image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <p className='header'>{element.header}</p>
-                    <a className='linkTo' href={element.iframe}> link to the app </a>
+                  <div className='projectInfoContainer' id={index} style={{ background: `url(${element.image})`}} onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}>
+                    {/*<p className='header'>{element.header}</p>*/}
+                    <a className='linkTo' href={element.iframe}> {element.iframe !== "" ? "link to the app" : ""}</a>
                   </div>
                   {/*<iframe src={element.iframe} className="projectImg" id={index} draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}/>*/}
                 </div>

@@ -18,6 +18,9 @@
     }
     .localizationGif {
         max-width: 650px;
+        @media (max-width: 2100px) and (min-width: 1700px) {
+            max-width: 520px;
+        }
         @media (max-width: 1700px) and (min-width: 1285px) {
             max-width: 420px;
         }
@@ -79,8 +82,7 @@
         align-self: center;
         @media (max-width: 3000px) and (min-width: 1700px) {
             margin-top: 15px;
-            width: 750px;
-            margin-bottom: 150px;
+            width: 650px;
         }
         @media (max-width: 1700px) and (min-width: 1285px) {
             width: 455px;

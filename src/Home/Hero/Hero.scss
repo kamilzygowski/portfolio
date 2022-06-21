@@ -88,7 +88,7 @@
                 --color3: dodgerblue;
                 --color4: blue;
                 font-family: Sriracha;
-                @media (min-width: 1200px) and (max-width: 1900px) {
+                @media (min-width: 1200px) and (max-width: 2000px) {
                     font-size: 18px;
                 }
                 @media (min-width: 950px) and (max-width: 1200px) {
@@ -112,7 +112,7 @@
         img {
             width: 74px;
             height: 74px;
-            @media (min-width: 1500px) and (max-width: 1900px) {
+            @media (min-width: 1500px) and (max-width: 2000px) {
                 width: 58px;
                 height: 58px;
             }
