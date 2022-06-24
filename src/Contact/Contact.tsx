@@ -18,13 +18,13 @@ const Contact = () => {
     }
   }
   const post_data = (data: any) => {
-    axios.post('https://mailer3.herokuapp.com/mail', {
+    axios.post('http://70.34.243.228:8000/mail', {
       name: data.target[0].value,
       subject: data.target[1].value,
       message: data.target[2].value
     })
       .then((res) => {
-        console.log(res)
+        //console.log(res)
       })
 
   }

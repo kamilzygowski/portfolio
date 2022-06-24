@@ -1,7 +1,10 @@
 $topBarColor: #334756e1;
 $topBarHeight: 50px;
 $projectsBackground: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-$buttonsBackground: #775cee;
+$buttonsBackground: #4bff04;
+$minButton: #00b894;
+$maxButton: #00cec9;
+$closeButton: #0984e3;
 .Projects {
     height: 100vh;
     width: 100vw;
@@ -29,9 +32,9 @@ $buttonsBackground: #775cee;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        background-repeat: "no-repeat";
-        background-size: "cover";
-        background-position: "center";
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
         .header {
             margin-block: 55px;
             height: 200px;
@@ -54,6 +57,8 @@ $buttonsBackground: #775cee;
             font-family: "Fascinate Inline", cursive;
             color: rgb(231, 255, 10);
             animation: link 4s infinite;
+            border-radius: 55px;
+            margin-bottom:7.5px;
         }
     }
     h3 {
@@ -89,8 +94,8 @@ $buttonsBackground: #775cee;
             margin: auto;
             margin-inline: 15px;
             &:hover {
-                background: rgba(255, 255, 255, 0.151);
-                transition: 1.15s;
+                background: rgba(255, 255, 255, 0.251);
+                transition: 0.15s;
             }
             img {
                 width: 45px;
@@ -187,15 +192,15 @@ $buttonsBackground: #775cee;
                 }
                 .closeBtn {
                     //background-color: #d8370e;
-                    background-color: $buttonsBackground;
+                    background-color: $closeButton;
                 }
                 .maxBtn {
                     // background-color: #706fd3;
-                    background-color: $buttonsBackground;
+                    background-color: $maxButton;
                 }
                 .minBtn {
                     // background-color: #34ace0;
-                    background-color: $buttonsBackground;
+                    background-color: $minButton;
                 }
             }
 
@@ -240,12 +245,14 @@ $buttonsBackground: #775cee;
 }
 @keyframes link {
     0% {
-        text-shadow: 0px 0px 0px rgba(255, 232, 0, 1);
+        text-shadow: 10px 10px 88px rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 31%, rgba(0, 219, 11, 0.437) 100%);
     }
     50% {
-        text-shadow: 4px 4px 49px rgb(255, 0, 1);
+        text-shadow: 14px 14px 149px rgb(0, 0, 0);
     }
     100% {
-        text-shadow: 0px 0px 0px rgba(255, 232, 0, 1);
+        text-shadow: 10px 10px 88px rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 31%, rgba(0, 219, 11, 0.437) 100%);
     }
 }

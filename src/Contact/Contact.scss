@@ -189,13 +189,15 @@
             }
         }
         .mailerMessage {
+            font-family: "Katibeh", cursive;
+            padding:10px;
             width: 720px;
-            height: 195px;
+            height: 115px;
             @media (max-width: 1700px) and (min-width: 1285px) {
                 margin-block: 20px;
                 margin-top: 2.5px;
                 width: 550px;
-                height: 135px;
+                height: 115px;
                 font-size: 23px;
             }
             @media (max-width: 1285px) and (min-width: 800px) {
@@ -205,12 +207,11 @@
                 height: 115px;
                 font-size: 23px;
             }
-
             &::placeholder {
                 font-size: 32px;
                 text-align: center;
                 font-family: "Katibeh", cursive;
-                padding-top: 50px;
+                padding-top: 10px;
                 @media (max-width: 1700px) and (min-width: 1285px) {
                     font-size: 23px;
                 }

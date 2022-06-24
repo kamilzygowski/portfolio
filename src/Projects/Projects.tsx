@@ -167,9 +167,9 @@ const Projects = () => {
                     </div>
                   </div>
                   <img src={element.src} className="projectImg" id={index} alt="project" draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)} />
-                  <div className='projectInfoContainer' id={index} style={{ background: `url(${element.image})`}} onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}>
+                  <div className='projectInfoContainer' id={index} style={{ backgroundImage: `url(${element.image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }} onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}>
                     {/*<p className='header'>{element.header}</p>*/}
-                    <a className='linkTo' href={element.iframe}> {element.iframe !== "" ? "link to the app" : ""}</a>
+                    <a className='linkTo' rel='noreferrer' target="_blank" href={element.iframe}> {element.iframe !== "" ? "link to the app" : ""}</a>
                   </div>
                   {/*<iframe src={element.iframe} className="projectImg" id={index} draggable="false" onDrag={(e) => changeIndexZToMax(e)} onClick={(e) => changeIndexZToMax(e)}/>*/}
                 </div>

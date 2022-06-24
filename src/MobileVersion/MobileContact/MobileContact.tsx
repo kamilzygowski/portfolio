@@ -3,8 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './MobileContact.scss'
 import { SocialIcon } from 'react-social-icons';
+import axios from 'axios'
 
 const MobileContact = () => {
+  const post_data = (data: any) => {
+    axios.post('http://70.34.243.228:8000/mail', {
+      name: data.target[0].value,
+      subject: data.target[1].value,
+      message: data.target[2].value
+    })
+      .then((res) => {
+        //console.log(res)
+      })
+  }
   return (
     <div className='MobileContact'>
       <div className='container'>
@@ -20,7 +31,7 @@ const MobileContact = () => {
           </div>
         </div>
         <p className='or'>or just text me down here</p>
-        <form className='mobileContactForm'>
+        <form className='mobileContactForm' onSubmit={(e) => { e.preventDefault(); post_data(e) }}>
           <input className='mobileMailerName' type="text" placeholder='Insert your name' name="name"></input>
           <input className='mobileMailerSubject' type="text" placeholder='Insert subject' name="subject"></input>
           <input className='mobileMailerMessage' placeholder='Write a message' name="message"></input>
