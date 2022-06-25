@@ -1,3 +1,4 @@
+$headerColor: #C3FCF2;
 .MobileHero {
     width: 100vw;
     min-height: 600px;
@@ -10,7 +11,8 @@
     background-position: bottom;
     background-size: 70%;
     z-index: 500;
-    color:#00C1BF;
+    color:$headerColor;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     .hello{
         font-family: 'Acme', sans-serif;
         margin-left:25px;

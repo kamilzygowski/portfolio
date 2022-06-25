@@ -11,7 +11,7 @@ interface MobileProject {
 const MobileProjects = (): JSX.Element => {
   const projectsInfo: MobileProject[] = [
     { img: "https://i.postimg.cc/Hs8fFnCp/skills.webp", title: "My skills", description: "Tap to expand my skills list", showSkills: true },
-    { img: "https://i.postimg.cc/wTjCLkyY/website.png", title: "Websites preparing", description: "preparing extraordinary websites is just a fun for me", showSkills:false },
+    { img: "https://i.postimg.cc/wTjCLkyY/website.png", title: "Websites", description: "preparing extraordinary websites is just a fun for me", showSkills:false },
     { img: "https://i.postimg.cc/tJ6Y5V4h/bot-1.webp", title: "Software, games and bots", description: "I love to automate things. That's why I'm always looking for a way to create complex and smart computer-beings", showSkills:false }
   ]
   const [isTapped, setTapped] = useState(false);

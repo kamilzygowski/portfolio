@@ -15,8 +15,6 @@
         cursor: pointer;
         animation: closeIdle 3s infinite;
         &:hover {
-            transform: rotate3d(1, 1, 1);
-            transform: scale(1.5);
             animation: closeHover 2.5s infinite;
             color: #ffe347;
             transition: 0.3s;
@@ -24,13 +22,14 @@
     }
     .mobileUl {
         list-style: none;
-        margin: auto;
-        top:50px;
-        left:0;
-        right: 0;
+        top:45px;
         margin-inline: auto;
         letter-spacing: 2px;
         position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .mobileLi {
             margin-block: 15%;
             font-size: 36px;
@@ -43,9 +42,6 @@
             color: #fff;
             display: flex;
             flex-direction: row;
-            margin-left:-25px;
-            left:0;
-            right: 0;
             margin-inline: auto;
             .icon {
                 padding-left: 10px;
@@ -67,11 +63,6 @@
                 transition: 0.3s;
                 color: #ffe347;
                 cursor: pointer;
-            }
-            &:hover > .background {
-                //clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-                clip-path: circle(60%);
-                transition: 0.6s;
             }
         }
     }
