@@ -7,8 +7,13 @@ import 'swiper/css';
 import Games from '../Games/Games';
 import Sidebar from '../Sidebar/Sidebar';
 import Contact from '../Contact/Contact';
+import { useState } from 'react';
+import Loading from '../Loading/Loading';
+import Success from '../Success/Success';
 
 const App = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
   // Get the ref to swiper
   let swiperRef: typeof Swiper | any;
   const swipeTo = (id: number) => {
@@ -22,6 +27,8 @@ const App = () => {
   }
   return (
     <div className='App'>
+      {loading === true ? <Loading /> : null}
+      {success === true ? <Success /> : null}
       <Sidebar swipeTo={swipeTo} />
       <Swiper
         direction={"horizontal"}
@@ -47,7 +54,7 @@ const App = () => {
           <Games />
         </SwiperSlide>
         <SwiperSlide>
-          <Contact />
+          <Contact setLoading={setLoading} setSuccess={setSuccess} />
         </SwiperSlide>
       </Swiper>
     </div>

@@ -1,0 +1,23 @@
+.Loading{
+    background:rgba(0,0,0,0.35);
+    position: fixed;
+    height:100vh;
+    width: 100vw;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon{
+        font-size: 46px;
+        animation: loading 0.7s infinite;
+        color:#fff;
+    }
+}
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

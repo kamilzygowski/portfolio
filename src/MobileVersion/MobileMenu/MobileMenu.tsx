@@ -5,7 +5,6 @@ import { faCode, faEnvelope, faGamepad, faHome, faXmark } from '@fortawesome/fre
 
 const MobileMenu = (props:React.SetStateAction<boolean | any>) => {
   const routing = (keyword: any) => {
-    console.log('clicked')
     quitMobileMenu()
     document.querySelector(`.${keyword}`)?.scrollIntoView()
   }

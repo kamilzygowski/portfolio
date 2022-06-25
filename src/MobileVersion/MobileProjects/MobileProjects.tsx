@@ -20,7 +20,7 @@ const MobileProjects = (): JSX.Element => {
       <div className='container'>
         {projectsInfo.map((element: MobileProject, index: number): JSX.Element => {
           return (
-            <div className='whatIDo' key={index} onClick={index === 0 ? (e:any) => !isTapped ? setTapped(true) : setTapped(false) : ()=> console.log('Wrong one chosen')}>
+            <div className='whatIDo' key={index} onClick={index === 0 ? (e:any) => !isTapped ? setTapped(true) : setTapped(false) : () => {}}>
               <img src={element.img} alt="img" />
               <div className='expandDiv'>
                 <h1>{element.title}</h1>

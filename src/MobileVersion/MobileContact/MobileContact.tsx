@@ -1,11 +1,11 @@
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useState } from 'react'
 import './MobileContact.scss'
 import { SocialIcon } from 'react-social-icons';
 import axios from 'axios'
 
-const MobileContact = () => {
+const MobileContact = (props: React.SetStateAction<boolean> | any) => {
   const post_data = (data: any) => {
     axios.post('http://70.34.243.228:8000/mail', {
       name: data.target[0].value,
@@ -15,6 +15,17 @@ const MobileContact = () => {
       .then((res) => {
         //console.log(res)
       })
+  }
+  const loading = () => {
+    props.setLoading(true);
+    setTimeout(() => {
+      props.setLoading(false);
+      props.setSuccess(true);
+      setTimeout(() => {
+        props.setSuccess(false);
+      }, 500)
+    }, 1500)
+
   }
   return (
     <div className='MobileContact'>
@@ -31,7 +42,7 @@ const MobileContact = () => {
           </div>
         </div>
         <p className='or'>or just text me down here</p>
-        <form className='mobileContactForm' onSubmit={(e) => { e.preventDefault(); post_data(e) }}>
+        <form className='mobileContactForm' onSubmit={(e) => { e.preventDefault(); loading(); post_data(e) }}>
           <input className='mobileMailerName' type="text" placeholder='Insert your name' name="name"></input>
           <input className='mobileMailerSubject' type="text" placeholder='Insert subject' name="subject"></input>
           <input className='mobileMailerMessage' placeholder='Write a message' name="message"></input>

@@ -138,24 +138,24 @@
                 margin-top: 2.5px;
                 width: 240px;
                 height: 50px;
-                font-size: 23px;
+                font-size: 20px;
             }
             @media (max-width: 1285px) and (min-width: 800px) {
                 margin-block: 10px;
                 margin-top: 2.5px;
                 width: 180px;
                 height: 40px;
-                font-size: 23px;
+                font-size: 18px;
             }
             &::placeholder {
                 font-size: 23px;
                 text-align: center;
                 font-family: "Katibeh", cursive;
                 @media (max-width: 1700px) and (min-width: 1285px) {
-                    font-size: 23px;
+                    font-size: 20px;
                 }
                 @media (max-width: 1285px) and (min-width: 800px) {
-                    font-size: 23px;
+                    font-size: 18px;
                 }
             }
         }
@@ -167,24 +167,24 @@
                 margin-top: 2.5px;
                 width: 240px;
                 height: 50px;
-                font-size: 23px;
+                font-size: 20px;
             }
             @media (max-width: 1285px) and (min-width: 800px) {
                 margin-block: 10px;
                 margin-top: 2.5px;
                 width: 180px;
                 height: 40px;
-                font-size: 23px;
+                font-size: 18px;
             }
             &::placeholder {
                 font-size: 23px;
                 text-align: center;
                 font-family: "Katibeh", cursive;
                 @media (max-width: 1700px) and (min-width: 1285px) {
-                    font-size: 23px;
+                    font-size: 20px;
                 }
                 @media (max-width: 1285px) and (min-width: 800px) {
-                    font-size: 23px;
+                    font-size: 18px;
                 }
             }
         }
@@ -198,14 +198,14 @@
                 margin-top: 2.5px;
                 width: 550px;
                 height: 115px;
-                font-size: 23px;
+                font-size: 20px;
             }
             @media (max-width: 1285px) and (min-width: 800px) {
                 margin-block: 20px;
                 margin-top: 2.5px;
                 width: 410px;
                 height: 115px;
-                font-size: 23px;
+                font-size: 18px;
             }
             &::placeholder {
                 font-size: 32px;
@@ -213,10 +213,10 @@
                 font-family: "Katibeh", cursive;
                 padding-top: 10px;
                 @media (max-width: 1700px) and (min-width: 1285px) {
-                    font-size: 23px;
+                    font-size: 20px;
                 }
                 @media (max-width: 1285px) and (min-width: 800px) {
-                    font-size: 23px;
+                    font-size: 18px;
                 }
             }
         }
@@ -239,7 +239,7 @@
                 height: 75px;
             }
             &:hover {
-                animation: 0.4s submit infinite ease-in-out;
+                animation: 1.4s submit infinite ease-in-out;
                 transition: 7s;
             }
         }
@@ -250,17 +250,12 @@
 }
 @keyframes submit {
     0% {
-        background: linear-gradient(
-            355deg,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 0, 255, 1) 37%,
-            rgba(0, 255, 255, 1) 100%
-        );
+        filter: hue-rotate(0deg)
     }
     50% {
-        background: linear-gradient(355deg, rgb(241, 171, 171) 0%, rgb(101, 189, 43) 37%, rgb(46, 4, 102) 100%);
+        filter: hue-rotate(180deg)
     }
     100% {
-        background: linear-gradient(355deg, rgb(252, 248, 31) 0%, rgb(81, 243, 216) 37%, rgb(48, 243, 145) 100%);
+        filter: hue-rotate(359deg)
     }
 }

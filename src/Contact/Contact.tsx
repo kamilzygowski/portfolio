@@ -4,7 +4,7 @@ import axios from 'axios'
 import { faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Contact = () => {
+const Contact = (props: React.SetStateAction<boolean> | any) => {
   const handleFocus = (e: MouseEvent | any) => {
     const inputs = document.querySelectorAll(".input")
     inputs.forEach((element) => {
@@ -16,6 +16,17 @@ const Contact = () => {
     if (e.target.classList.contains('input')) {
       e.target.classList.add('focused');
     }
+  }
+  const loading = () => {
+    props.setLoading(true);
+    setTimeout(() => {
+      props.setLoading(false);
+      props.setSuccess(true);
+      setTimeout(() => {
+        props.setSuccess(false);
+      }, 500)
+    }, 1500)
+
   }
   const post_data = (data: any) => {
     axios.post('http://70.34.243.228:8000/mail', {
@@ -31,7 +42,7 @@ const Contact = () => {
   return (
     <div className="Contact" onClick={(e) => handleFocus(e)}>
       <div className='container'>
-        <form className='mailerForm' autoComplete='off' onSubmit={(e) => { e.preventDefault(); post_data(e) }}>
+        <form className='mailerForm' autoComplete='off' onSubmit={(e) => { loading(); e.preventDefault(); post_data(e) }}>
           <img src="https://i.postimg.cc/Pq6bhpSd/contact.webp" alt="header" className='contactHeader' />
           <div className='narrowInputs'>
             <div className='inputWrapper'>
