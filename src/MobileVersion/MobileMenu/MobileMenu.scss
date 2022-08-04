@@ -1,8 +1,9 @@
 .MobileMenu {
     position: fixed;
     width: 100%;
-    height: inherit;
+    height: 100vh;
     background-color: #5968b0;
+    background-image: url("https://i.postimg.cc/4NbBF6Q7/arabesque-1.png");
     z-index: 4000;
     font-family: "Chicle", cursive;
     overflow: hidden;
@@ -22,16 +23,14 @@
     }
     .mobileUl {
         list-style: none;
-        top:45px;
         margin-inline: auto;
         letter-spacing: 2px;
         position: fixed;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         .mobileLi {
-            margin-block: 15%;
+            margin-block: 10%;
             font-size: 36px;
             font-weight: bold;
             font-size: 48px;
@@ -45,10 +44,12 @@
             margin-inline: auto;
             .icon {
                 padding-left: 10px;
+                color:#f8c291;
             }
             p {
                 margin-top: 0px;
                 padding-left: 45px;
+                text-shadow: 4px 3px 0px rgb(0, 0, 0), 9px 8px 0px rgba(0,0,0,0.15);
             }
             .background {
                 width: inherit;

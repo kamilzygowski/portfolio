@@ -7,7 +7,6 @@ const Success = () => {
   return (
     <div className='Success'>
         <FontAwesomeIcon icon={faCircleCheck} className="icon"/>
-        <p className='sent'> E-mail Sent</p>
     </div>
   )
 }

@@ -7,11 +7,12 @@ import 'swiper/css';
 import Games from '../Games/Games';
 import Sidebar from '../Sidebar/Sidebar';
 import Contact from '../Contact/Contact';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Loading from '../Loading/Loading';
 import Success from '../Success/Success';
 
 const App = () => {
+  
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   // Get the ref to swiper

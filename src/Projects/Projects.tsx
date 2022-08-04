@@ -31,12 +31,11 @@ const Projects = () => {
   const [projects, setProjects] = useState<Project[] | any>(initialProjects);
   const [minimizedWindow, setMinimizedWindows] = useState<Project[]>([])
   const handleClose = (e: any) => {
-    console.log('close', e.target.id)
-    console.log(projects)
     // Copy projects arr to new array
     const array = [...projects];
     // Fix the array to remove this window
     array.splice(e.target.id, 1)
+    //array[e.target.id] = "";
     setProjects([
       ...array
     ])
@@ -62,22 +61,18 @@ const Projects = () => {
       return;
     }
     handleClose(e);
-    console.log(e.target.id)
     setMinimizedWindows([
       ...minimizedWindow,
       projects[e.target.id]
     ])
-    console.log(minimizedWindow)
   }
   const arrangeWindows = () => {
     const allWindows: any = document.querySelectorAll('.window')
     const screenWidth = window.innerWidth
     const screenHeight = window.innerHeight
-    console.log(allWindows, screenWidth, screenHeight)
     for (let i = 0; i < allWindows.length; i++) {
       allWindows[i].style.left = (i * (screenWidth / allWindows.length - 60) + 20) + 'px'
       allWindows[i].style.top = (i * (screenHeight / allWindows.length - 40) + 20) + 'px'
-      console.log(allWindows[i].style.left, allWindows[i].style.top)
     }
   }
   const handleMaximize = (e: any) => {
@@ -85,9 +80,7 @@ const Projects = () => {
     if (e.target.localName === "path") {
       id = e.target.parentNode.id
     }
-    console.log('id : ', id)
     const windows: any = document.querySelectorAll('.window');
-    console.log(windows[id].style.width)
     if (windows[id].style.width === hardCodedMaximize.width) {
       windows[id].style.width = hardCodedBasicSizes.width
       windows[id].style.height = hardCodedBasicSizes.height
@@ -95,6 +88,7 @@ const Projects = () => {
     } else if (windows[id].style.width === hardCodedBasicSizes.width) {
       windows[id].style.width = hardCodedMaximize.width;
       windows[id].style.height = hardCodedMaximize.height;
+      console.log( windows[id].style.width, windows[id].style.height)
       //projectImg[id].style.marginTop = -662 + 'px'
     }
     // Set the information display on maxButton click
@@ -116,11 +110,6 @@ const Projects = () => {
       windows[i].style.height = hardCodedBasicSizes.height
     }
   }
-  const createInfoContent = () => {
-    return (
-      <p> XD </p>
-    )
-  }
   useEffect(() => {
     setRememberedProjects([...projects])
     const windows: NodeListOf<Element | any> = document.querySelectorAll('.window');
@@ -138,6 +127,9 @@ const Projects = () => {
       <div className='projectsList' ref={windowElement}>
         {!restartWindows ?
           projects.map((element: any, index: string) => {
+            if (element === ""){
+              return null;
+            }else{
             return (
               <Draggable
                 axis="both"
@@ -145,7 +137,7 @@ const Projects = () => {
                 key={index}
                 onDrag={(e) => changeIndexZToMax(e)}
               >
-                <div className='window' style={{ zIndex: 50 }} id={index} key={index} onClick={(e) => changeIndexZToMax(e)}>
+                <div className='window' style={{ zIndex: 50, width: hardCodedBasicSizes.width, height: hardCodedBasicSizes.height }} id={index} key={index} onClick={(e) => changeIndexZToMax(e)}>
                   <div className='topBar' id={index} onDrag={(e) => changeIndexZToMax(e)} >
                     <div className='Btn closeBtn' id={index} onClick={(e) => handleClose(e)}>
                       <div className='mirror'>
@@ -175,7 +167,7 @@ const Projects = () => {
                 </div>
               </Draggable>
             )
-          })
+          }})
           : null}
         {restartWindows ? setTimeout(() => { setProjects([...rememberedProjects]); setRestartWindows(false); restartComponent() }, 0) : null}
       </div>

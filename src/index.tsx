@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 import MobileVersion from './MobileVersion/MobileVersion';
+
 
 ReactDOM.render(
   //<React.StrictMode>

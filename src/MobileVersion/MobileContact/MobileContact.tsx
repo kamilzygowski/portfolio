@@ -6,8 +6,9 @@ import { SocialIcon } from 'react-social-icons';
 import axios from 'axios'
 
 const MobileContact = (props: React.SetStateAction<boolean> | any) => {
+  const api_url = process.env.REACT_APP_API_URL;
   const post_data = (data: any) => {
-    axios.post('http://70.34.243.228:8000/mail', {
+    axios.post(`http://${api_url}/mail`, {
       name: data.target[0].value,
       subject: data.target[1].value,
       message: data.target[2].value
@@ -25,8 +26,8 @@ const MobileContact = (props: React.SetStateAction<boolean> | any) => {
         props.setSuccess(false);
       }, 500)
     }, 1500)
-
   }
+
   return (
     <div className='MobileContact'>
       <div className='container'>

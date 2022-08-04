@@ -5,6 +5,8 @@ import { faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = (props: React.SetStateAction<boolean> | any) => {
+  const api_url = process.env.REACT_APP_API_URL;
+
   const handleFocus = (e: MouseEvent | any) => {
     const inputs = document.querySelectorAll(".input")
     inputs.forEach((element) => {
@@ -29,7 +31,7 @@ const Contact = (props: React.SetStateAction<boolean> | any) => {
 
   }
   const post_data = (data: any) => {
-    axios.post('http://70.34.243.228:8000/mail', {
+    axios.post(`http://${api_url}/mail`, {
       name: data.target[0].value,
       subject: data.target[1].value,
       message: data.target[2].value

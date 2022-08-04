@@ -1,4 +1,4 @@
-$topBarColor: #334756e1;
+$topBarColor: #334756;
 $topBarHeight: 50px;
 $projectsBackground: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 $buttonsBackground: #4bff04;
@@ -59,6 +59,10 @@ $closeButton: #0984e3;
             animation: link 4s infinite;
             border-radius: 55px;
             margin-bottom:7.5px;
+            &:hover{
+                transition: 0.4s;
+                filter: hue-rotate(180deg)
+            }
         }
     }
     h3 {
